@@ -1,0 +1,1104 @@
+-------------------------------------------------------------------------------
+ChangeLog
+-------------------------------------------------------------------------------
+2006-01-09    <kalum@genesys.ro>
+
+	* src/ftpsearch.c (get_string_ahref): Applied Hans de Goede
+	<j.w.r.degoede@hhs.nl> patch. It improved the readability of the code.
+
+2006-01-07    <kalum@genesys.ro>
+
+	* src/ftpsearch.c (parse_lycos_html_mirror_list):Changed a bug
+	where a non null termintaed string was passed to the debug
+	routine. Bug submission and fix by Hans de Goede <j.w.r.degoede@hhs.nl>.
+	* src/ftpsearch.c several occurences of sizeof(buf) were changed
+	to sizeof(buf)/sizeof(char) as char can be >1 Bug submission and
+	fix by Hans de Goede <j.w.r.degoede@hhs.nl>.  
+
+2005-12-11    <kalum@genesys.ro>
+
+	* src/download.c (download_join_downloads): No need to push a
+	function to delete the joining file anymore.
+	(download_handle_threads_no_ftpsearch): Fixed a bug where
+	funlockfile was called after fclose.
+
+2005-11-25    <kalum@genesys.ro>
+
+	* src/Makefile.am (CPPFLAGS): @CPPFLAGS@ added so that the
+	CPPFLAGS environment variable is used. Patch from Alejandro Pulver
+	<alejandro@varnet.biz>
+
+2005-11-22    <kalum@genesys.ro>
+
+	* src/download.c (proz_download_load_resume_info): Fixed a bug
+	which caused a incorrect value of the number of bytes downloaded
+	for completed connections to be displayed.	
+
+2005-11-12    <kalum@genesys.ro>
+
+	* src/connection.c (proz_connection_get_total_remote_bytes_got):
+	There appears to be a bug when resuming when a too high total
+	speed is displayed. Debugging steps added to help to try to
+	isolate the problem.
+
+2005-10-23    <kalum@genesys.ro>
+
+	* src/getopt.c and src/getopt.h were removed and depend on the
+	systems implementation.
+
+2005-10-22    <kalum@genesys.ro>
+
+	* src/ftpparse.c (ftp_parse): strndupa replaced with strndup for portability.
+
+2005-10-22    <kalum@genesys.ro>
+
+	* src/ping.c (tcp_ping): getaddrinfo function is used to resolve names.
+
+2005-10-16    <kalum@genesys.ro>
+
+	* Instances of "%Ld" were changed to "%lld" to enable
+	compatinility with FreeBSD, as suggested by Alejandro Pulver
+	<alejandro@varnet.biz>.
+	
+	* src/connect.c (connect_to_server): getaddrinfo was used to
+	resolve the name queries for portability, patch submitted by
+	Alejandro Pulver <alejandro@varnet.biz> from FreeBSD.
+
+2005-10-15    <kalum@genesys.ro>
+	* src/common.h: netinet/in_systm.h included.
+
+2005-09-19    <kalum@genesys.ro>
+
+	* src/connection.c (connection_calc_ratebps): connection
+	throttling was giving weird results when running in resume
+	mode,this was fixed.
+	(connection_calc_ratebps): Made it delay a bit before calculating
+	the initial rate so as to avoid high values as the start, the delay makes
+	it calculate the rate more accurately.
+
+2005-09-04    <kalum@genesys.ro>
+
+	* src/ftpsearch.c (get_string_ahref): Fixed the unchecked
+	strncpy(), as discovered by Tavis Ormandy <taviso@gentoo.org>
+	which as the target is a stack buffer could be exploited by an
+	attacker to perform dns or http cache posioning 
+
+2005-09-02    <kalum@genesys.ro> 
+	* Merged several patches submitted by Richard Dawe which fixed
+	compilation warnings.
+	
+2005-09-02    <kalum@genesys.ro>
+
+	* src/prozilla.h (MAX_MSG_SIZE): Reduced to 1024.
+
+2005-08-28    <kalum@genesys.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): If the LIST command fails
+	then it should not be a fatal error, as you can proceed with the
+	download without knowning the files size.
+
+2005-08-28    <kalum@genesys.ro>
+
+	* src/ftp.c (ftp_size, ftp_list): Made it check for the return code of 550
+	which indicates the file is not found, it fixed a bug which was
+	introduced into the current code whereby a file not found was not
+	generated on some servers when the file was not found.
+
+2005-08-27    <kalum@genesys.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): If the remote server returns
+	  FTPNSFOD which could be due to the fact that the server doesnt
+     	  permit the directory contents to be listed we will print a
+	  warning and return  FTPOK as it is not a fatal error.
+
+2005-08-26    <kalum@genesys.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): If the ftpparse routine fails
+	to parse the line, return FTPPARSEFAIL.
+
+2005-08-22    <kalum@genesys.ro>
+
+	* src/connection.c (connection_load_resume_info): Fixed a bug in
+	the code which sets the start position of the thread on resuming,
+	this bug was responsible for the negative time display and
+	corruption when a resumed download was restarted due to a remote failure.
+
+2005-07-31    <kalum@genesys.ro>
+
+	* src/ftpparse1.c: This new file was added which contains routines
+	for improved parsing of the LIST command from ftp servers, for the
+	moment it supports only getting the file size from a unix server.
+
+	* src/ftp.c (proz_ftp_get_url_info): Now we use the SIZE command
+	to get the file size, and then we parse the LIST command and get
+	the file size and other info.
+
+2005-07-27    <kalum@genesys.ro>
+
+	* src/connect.c (connect_to_server): SO_KEEPALIVE enabled as
+	suggested by Pawel Pokrywka <publicpp@gmail.com>, patch merged.
+
+2005-07-09    <kalum@genesys.ro>
+
+	* src/ftp.c (ftp_get_line): Situations when the server prematurely
+	closes the connection badly was handled correctly.
+
+2005-6-19 Grendel <kalum@genesys.ro>
+	* Added download_switch_server_ftpsearch function to download.c
+	which attempts to find a server which has completed downloading
+	and switch to it, and cleaned up the code.
+
+2005-04-02  Sean E. Covel <seanecovel@comcast.net>
+
+	* Added Large File support.
+	* Added debug lib flag
+	* Modified lib to support more than just progui
+	* Added minsearchsize
+	* prozilla 2.0 now uses libprozilla
+
+2001-10-21  Kalum / Grendel  <kalum@delrom.ro>
+
+        * Include sys/stat.h
+
+2001-10-10  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/http.c (ftp_get_url_info_from_http_proxy): Changed to use
+	  GET instead of HEAD to get HTTP info.
+
+2001-10-10  Kalum / Grendel  <kalum@delrom.ro>
+	* Now the URL parser doesnt touch hex chars.
+	
+2001-10-04  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/ping.c (proz_cancel_mass_ping): Added, cancels a mass ping 
+	  request.
+
+2001-10-03  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/ftpsearch.c: 
+	   void proz_cancel_mirror_list_request(ftps_request_t *)
+	This will cancel a request for getting mirrors.
+
+2001-09-30  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.c (proz_download_join_downloads): Now creates the
+	  joining thread itself.
+
+	* src/prozilla.h: 
+		
+	  uerr_t proz_download_get_join_status(download_t *download);
+	  float proz_download_get_file_build_percentage(download_t * download);
+	  void proz_download_cancel_joining_thread(download_t * download)
+	
+	  Were added to the library.
+	*	joining_thread added to download_t struct definition;
+
+2001-09-30  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/connection.c (proz_get_url_info_loop): This now creates the thread that gets info by itself, there is no need to create it by calling pthread as earlier was necessary.
+
+2001-09-29  Kalum / Grendel  <kalum@delrom.ro>
+	* Improved the consisetncy of the API based on suggestions by
+	  Christophe Fergeau<christophe.fergeau@laposte.net>.
+
+	* src/prozilla.h: In the download_t struct, cchanged the
+	  connections pointer type to **, and called it pconnections.
+
+	* src/connection.c (proz_connection_init): Prototype changed to 
+        	proz_connection_init(urlinfo *url,pthread_mutex_t * mutex);
+	
+	* src/prozilla.h: proz_connection_set_url(connection_t * connection, urlinfo *url) added.
+
+2001-09-29  Kalum / Grendel  <kalum@delrom.ro>
+	* I have added a function which checks to see whether all the 
+	  connections have encountered the same user specified error.
+
+	* Updated libprozillas runtime handling so that it can handle
+	  ftpsearch returned servers that dont support FTP REST.
+
+
+2001-09-28  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.c (proz_download_init):  boolean
+	  proz_download_all_dls_status, proz_download_all_dls_err we added 
+ 	  and  download.c updated accordingly.
+
+2001-09-28  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.h: Added download_query_conns_status_count which
+	  returns the number of connections with the status spcified, and 
+          updated download.c to use it.
+
+2001-09-27  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/connect.c (connect_to_server): Now uses its own timeout struct
+
+2001-9-23 Kalum / Grendel  <kalum@delrom.ro>
+	* FTPSearch and pinging and multiple server downloads work, with 
+	  error handling too.
+
+	* Bug fix related to not adding the original server if it is not 
+	  in the list.   
+
+2001-09-20  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/url.c (proz_copy_url): Added.
+
+
+2001-09-17  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/prozilla.h: mirror_path_t added
+
+	* src/download.c (proz_download_handle_threads): Now handles
+	  FTPCWDFAIL in the main thread.
+
+2001-09-2  Kalum / Grendel  <kalum@delrom.ro>
+        * Kreazy's itallian translation was added,  ping.c, ping.h, 
+	ftpsearch.c and ftpsearch.h were added in preparation to adding
+	ftpsearch support to the library.
+
+2001-08-32  Kalum / Grendel  <kalum@delrom.ro>
+	* Gustavo's libtolising patch was added to libprozilla, now shared 
+	  libraries can be created.
+
+2001-08-25  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): Now the password is printed
+	  as a set of "xxxx"'s when logging in.
+
+2001-08-21  Kalum / Grendel  <kalum@delrom.ro>
+
+	* configure.in: Changed enble compiler warnings from min to no, as
+	  the intl dir was not compiling properly due to the --pedantic
+	  option.
+	
+2001-08-12  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/prozilla.h: int proz_download_delete_target  added.
+
+2001-08-11  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/url.c: Completely updated the source from url.c in wget 1.7,
+	  so now we have improved url parsing.
+
+2001-08-10  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/prozilla.h: int proz_download_target_exist(download_t *
+	  download) added whcih checks to see whether the target file
+	  exists.
+
+2001-08-08  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/debug.c void proz_debug_delete_log() added, and now the
+	  logfile is stored as $HOEDIR/.prozilla/debug.log
+
+2001-08-06  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.h: void download_calc_throttle_factor(download_t
+	  *download)
+
+	* src/prozilla.h: dl_status
+	  proz_connection_get_status(connection_t * connection) was added.
+
+2001-08-05  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/prozilla.h: max_bps_per_dl added to  libprozinfo.
+
+	* src/download.c (cleanup_joining_thread): When the files are
+	  joined this will delete the target output file if the thread is
+	  cancelled
+
+2001-07-31  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/http-retr.c (proz_http_get_file): Fixed a bug which occured
+	  when resuming where prozilla mistakenly identified a server as 
+	  returning a wrong contlen. Added another hs strcut called
+	  hs_after_get to do this.
+
+2001-07-29  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/main.c (proz_init): the dl_dir logfile_dir use local copies
+	  of the dirs
+
+
+2001-07-29  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/logfile.c: the logfile is checked in log_dir now
+
+2001-07-27  Kalum / Grendel  <kalum@delrom.ro>
+
+	* DOcumentation updated.  
+
+2001-07-20  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.h: download_any_dls_local_fatal added.
+
+2001-07-18  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/prozilla.h: output_dir added to the runtime struct this
+	  shows the directory to build the outputfile.
+
+
+2001-07-11  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/main.c: proz_set_connection_retry_delay(struct timeval
+	  *delay) aded.
+
+2001-07-11  Kalum / Grendel  <kalum@delrom.ro>
+
+	* src/download.c (proz_download_init): added a acess_mutex for the
+	  download_t struct
+
+2001-07-06    <kalum@delrom.ro>
+	
+	* src/http.c: support was added for using the no-cache directive
+	  for HTTP proxies.
+
+	* src/prozilla.h: http_no_cache, added. 
+
+2001-07-05    <kalum@delrom.ro>
+
+	* src/download.c (proz_download_free_download): Added,
+	  conditionally frees the data of the download struct
+
+2001-07-05    <kalum@delrom.ro>
+
+	* src/connection.c (connection_free_connection): Added,
+	  conditionally frees the data in the connection struct.
+
+2001-07-03    <kalum@delrom.ro>
+
+	* src/download.c (proz_download_get_est_time_left): The tiem left
+	  was not correctly displayed when resuming a download, fixed 
+	  this.
+
+2001-07-02    <kalum@delrom.ro>
+
+	* src/http.c, src/http-retr.c: Support for HTTP proxy servers was
+	  improved, it now works with servers like squid, wwwoffle.
+
+2001-07-01    <kalum@delrom.ro>
+
+	* src/prozilla.h: added access_mutex to connection_t struct which
+          is a mutex used to lock acesss to data in the struct that is
+	  accesed/written by other threads
+
+2001-06-27    <kalum@delrom.ro>
+
+	* src/ftp-retr.c (proz_ftp_get_file): Handles FTPCONREFUSED.
+	
+2001-06-24    <kalum@delrom.ro>
+
+	* src/http.c (cleanup_httpsocks): moved it to http.c from http-retr.c
+
+	* src/ftp.c (cleanup_ftpsocks): moved it to ftp.c from ftp-retr.c
+
+	* src/misc.c (proz_strerror): This function will return a string
+	  representation of prozillas error codes.
+
+2001-06-22    <kalum@delrom.ro>
+
+        * Updated the GNU gettext sources in the intl diretory to version 
+	  gettext-0.10.38.
+
+2001-06-21    <kalum@delrom.ro>
+
+	* src/url.c (url_merge): Merges a url with another link (which can
+	be relative or absolute) and returns the resulting URL, this is mainly
+	used for redirections
+
+2001-06-21    <kalum@delrom.ro>
+
+	* src/download.c (proz_download_get_average_speed): Rewrote the
+	function, improving the accuracy.
+
+2001-06-20    <kalum@delrom.ro>
+
+	* src/ftp-retr.h: added cleanup_ftpsocks which is popped so that
+	  when the thread terminates no unclosed sockets will remain.
+
+	* src/http-retr.h: added cleanup_httpsocks which is popped so that
+	  when the thread terminates no unclosed sockets will remain.
+
+	* src/misc.c (close_sock): Will free a socket and zero the value,
+	  updated all references to close to close_socket
+
+	* src/debug.h (proz_debug): added debug_init which deletes a prior
+	  debug.log file if present.
+
+2001-06-19    <kalum@delrom.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): Fixed bug when getting info
+	  about a file
+
+2001-06-18    <kalum@delrom.ro>
+
+	* src/logfile.c: Changed several functions to proz_log_xxxx and
+	   moved the logfile structure to prozilla.h.
+
+	* (proz_log_read_logfile): Added a boolean type which indicates
+	  whether to load the info about the connections allocation or
+	  not.
+
+2001-06-16    <kalum@delrom.ro>
+
+	* src/ftpparse.c (size_returner): If the string returned from the
+	  FTP LIST command is 0 or 2 assume that the file is not present 
+ 	  on the server.
+
+2001-06-16    <kalum@delrom.ro>
+
+	* src/prozilla.h: added long proz_download_get_est_time_left
+	  returns the estimlted download time in secs.
+	
+2001-06-11    <kalum@delrom.ro>
+
+	* src/http-retr.c (proz_http_get_file): Fixed a bug where the data
+	  conenction was not closed when CANTRESUME was detected.
+
+2001-06-11    <kalum@delrom.ro>
+
+	* src/http.c (ftp_get_url_info_from_http_proxy):  Enables getting
+          FTP file related info	through HTTP proxies.
+
+	* src/http-retr.c (ftp_get_file_from_http_proxy): Enables getting
+	  FTP files through HTTP proxies.
+	
+2001-06-07    <kalum@delrom.ro>
+	
+	* Added KoV's patch for gettext internatinalisation support
+
+	* src/main.c: Added proz_use_http_proxy proz_use_ftp_proxy
+
+	* src/ftp.c (ftp_login): Fixed a bug related to logging in to ftp
+	  proxies.
+
+2001-06-02    <kalum@delrom.ro>
+
+	* src/connection.c (proz_get_url_info_loop): Made this thread
+	  immediately cancellable.
+
+2001-05-30    <kalum@delrom.ro>
+	* libprozilla has now generic http and ftp download functions, and
+          has resume support too. Several functions related to
+	  downloading, and handling the nultithreaed downloads were added
+	  to download.c
+	   
+2001-05-14    <kalum@delrom.ro>
+
+	* src/connection.c (proz_get_url_info_loop): added
+
+	* src/prozilla.h: added conn_retry_delay to libprozillartinfo
+	  which specifies the retry interval for co9nnenctions added
+	  max_attempts, which is the number of times a connection will be
+          retried.
+
+2001-05-10    <kalum@delrom.ro>
+	* Ran gnu indent with the options "-kr -i2 -bli0 -bl
+          -nfca" to get the course upto the coding standards.
+
+2001-05-08    <kalum@delrom.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): Forgot to close the ctrl_sock
+          in certain error conditions, FIXED.
+
+	* src/download.c (proz_download_join_downloads): This func will
+          join the downloaded portions.
+
+2001-05-06    <kalum@delrom.ro>
+
+	* src/download.c (proz_download_delete_download): This function
+          will delete the downloaded file portions together with the
+          downloads logfile.
+
+	* src/prozilla.h (download_t): added boolean type resume_support;
+  	  added a extra argument to proz_download_start_downloads, which
+          specifies whether to load resume info and start the dl.
+
+Tue May  8 21:15:49 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* TODO: Removed all 'DONE' entries. Just for testing if CVS
+	  automatically sends mails to prozilla-cvs@delrom.ro upon every
+	  CVS commit...
+
+2001-05-04    <kalum@delrom.ro>
+
+	* src/http-retr.c (http_loop_handle_error): added.
+
+	* src/ftp-retr.c (ftp_loop_handle_error): added
+
+	* src/prozilla.h: Moved all the proz_xxxx functions to prozilla.h,
+          and the connection_t and download_t structs and necessary enums
+          as well.
+          Now the person who users the library should only have to include
+          prozilla.h
+
+	* src/download.c (proz_download_get_total_bytes_got): added it.
+
+2001-05-03    <kalum@delrom.ro>
+
+	* src/prozilla.h (enum): added DLERR, DLOK, DLINPROGRESS as return
+          types for proz_download_handle_threads
+
+	* src/connection.c (proz_connection_get_total_bytes_got): 
+	 Returns the total number of bytes that have been saved to the file
+
+	* src/download.c (proz_download_get_connection): Added.
+
+	* src/connection.c (proz_connection_get_status_string): This will
+         return a textual representation of the status of a conenction.
+
+	* src/download.h (download_t): Added main_file_size, resume_mode
+
+	* src/download.c (proz_download_init): Changed the type of
+          connection->status_change_mutex to recursive
+
+	* (proz_download_all_dls_complete): Returns TRUE if all the
+          connections have been completed
+
+2001-05-01    <kalum@delrom.ro>
+
+	* src/prozilla.h (enum): rearranged the uerr_t enum for clarity.  
+
+2001-04-30    <kalum@delrom.ro>
+
+	* src/download.c (proz_download_handle_threads):created it to handle the threads.
+
+	* src/connection.c (connection_retr_fsize_known): fixed a bug in which the wrong size wass passed to krecv.
+
+2001-04-29    <kalum@delrom.ro>
+
+	* src/prozilla.h (libprozinfo): added default_timeout.
+
+2001-04-27    <kalum@delrom.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): added additional show_message
+          function calls.
+
+2001-04-25    <kalum@delrom.ro>
+
+	* src/url.h: changed parseurl, to proz_parse_url, since it would
+          be used external routines and updated all sources accordingly
+
+	* Added C++ style #ifdef __cplusplus to all headers
+	
+
+2001-04-24    <kalum@delrom.ro>
+
+	* src/connection.h (connection_t): 
+
+	* src/prozilla.h (libprozinfo): added dl_dir and log_dir.  
+
+	* src/download.h (download_t): added dl_dir [PATH_MAX] which is the base dir to which the file segments will be downloaded to, and log_dir which is the dir to which the log files are saved, currently it is the same as dl_dir but we can change it later.
+
+	* src/download.c (proz_setup_connections_no_ftpsearch): 
+
+	* src/misc.c (show_message): added a wrapper for routine to callback a message displaying routine. 
+
+	* src/connection.c (connection_retr_fsize_known):  
+          This will open connection->localfile and read from
+	  connection->data_sock (which should be already setup) till the
+	  requested number of bytes are read.
+	  Now since we explicitly know how much bytes to get we can do so,
+          and is the server  closes the connection prematurely we know that 
+	  it has hapenned (because it hasn't supplied the required number
+          of bytes) and return a READERR.
+
+	* src/http-retr.h, src/http-retr.c, src/ftp-retr.h, src/ftp-retr.c:
+	  Initial Import to CVS with support for file transfer.
+
+2001-04-21    <kalum@delrom.ro>
+
+	* src/prozilla.h (enum): added FILEGETOK, 
+
+	* src/connection.c (connection_retr_fsize_not_known): 
+	 This will open connection->localfile and read from
+         connection->data_sock (which should be already setup) till a EOF
+         is reached or the server closes the connection, in which case there is no way to know 
+         whether we got the complete file.  
+
+Sun Apr 22 17:02:50 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+
+	* TODO, src/connect.c, src/connection.c, src/connection.h,
+	  src/download.c, src/download.h, src/ftp.c, src/http.c, src/misc.c,
+	  src/prozilla.h, src/test.c: Cosmetic changes and coding-style fixes.
+
+	* docs/HACKING: TABs are allowed in Makefile.am's. 
+	  Advise contributors to send
+	  several smaller patches rather than one big patch...
+
+	* src/connect.c, src/connection.c, src/http.c, src/netrc.c, src/url.c,
+	  src/url.h: Use kfree() instead of free() everywhere.
+
+	* src/http.c: Brought up to current coding-standards. Removed casts
+	  of the result of kmalloc() and krealloc().
+
+	* src/http.h: Added prototypes for all functions in src/http.c.
+
+2001-04-20    <kalum@delrom.ro>
+
+	* src/download.c: added proz_init_download, and
+	proz_setup_connections, the prototypes may have to be changed later, I
+	couldnt figure out this part, I'll start over it once I have the
+	http/ftp download part of a connection ready.
+
+2001-04-20    <kalum@delrom.ro>
+
+	* src/test.c (main): Updated the test program a bit to test out
+	  the http proxy code
+
+	* src/http.c (proz_http_get_url_info): Now gets a http urls
+	  attributes, proxy support too added
+	
+	*  src/http.c: Added support routines to http.c
+
+	* src/connection.h (connection_t): added  type http_stat_t for http
+
+	* src/prozilla.h: added struct http_stat_t, and DEFAULT_USER_AGENT
+
+	* src/connection.h (connection_t): added user_agent and
+	  new_location for http
+
+	* src/connection.h (connection_t): added a pointer to a
+	  status_change_mutex, the mutex will be in the download_struct.
+
+Fri Apr 20 14:32:35 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* TODO, src/connection.h, src/download.h, src/ftp.c, src/ftp.h,
+	  src/http.c, src/http.h, src/main.c, src/test.c:
+	  Cosmetic changes and coding-style fixes and fixed typos.
+
+	* docs/HACKING: Added an example code segment.
+
+	* src/http.h: Fixed typo which prevented http.o from compiling.
+
+	* src/url.c, src/url.h: Use boolean instead of int where appropriate.
+
+	* src/url.h: Remove prototypes for non-existing functions. Convert
+	  all prototypes to ANSI prototypes, i.e. list the variable names
+	  in the prototype...
+
+2001-04-20    <kalum@delrom.ro>
+
+	* src/ftp.c (ftp_setup_data_sock_1): moved the code for setting up
+          a data socket from ftp_get_url_info to here, as we will need
+          these functions when receiving a file.
+	
+	* src/main.c (proz_set_xxx_proxy): wrote it..
+	
+	* src/main.c (proz_shutdown): kfrees libprozrtinfo.xxx_proxy
+
+2001-04-20    <kalum@delrom.ro>
+
+	* src/http.c, src/http.h: added to repository.
+
+2001-04-19    <kalum@delrom.ro>
+
+	* src/ftp.h (struct): removed ftp_stat_t
+
+Thu Apr 19 19:49:30 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* docs/HACKING: Cosmetic changes.
+
+	* src/test.c: Added a few missing '\n's. If you give an URL on the
+	  commandline use that, otherwise use the hardcoded URL in test.c.
+
+Thu Apr 19 18:20:47 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* TODO, src/connect.c, src/connect.h, src/connection.c,
+	  src/connection.h, src/download.h, src/ftp.c, src/ftp.h, src/main.c,
+	  src/misc.c, src/misc.h, src/test.c:
+	  Cosmetic changes and coding style fixes.
+
+	* config.h.in, configure: Autogenerated.
+
+	* docs/HACKING: Several Updates. Added information about indentation
+	  width, brace style, names, TODO, FIXME and NOTE, ChangeLog entries,
+	  comments, automatically generated files and common.h
+
+	* src/prozilla.h: Added the proz_set_http_proxy() and
+	  proz_set_ftp_proxy() again, because I removed them mistakenly.
+
+2001-04-19    <kalum@delrom.ro>
+
+	* src/connect.h, src/connect.c: Added accept_connection(), should
+          this file be in ftp.c instead?
+
+	* src/connection.h (connection_t): pasv_addr[6] has mistakenly
+	  been of type timeval, corrected it to unsigned char.
+
+	* src/ftp.h: Added ftp_size().
+
+	* src/connection.h, src/connection.c: Added proz_init_conection(),
+	  and proz_cleanup_connection().
+
+	* src/misc.h, src/misc.c: Added kfree() which frees memory if
+          neccessary.
+
+	* src/test.c: Tests the file size getting code.
+
+Thu Apr 19 15:32:26 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* README: Added installation information.
+
+	* TODO: Added item 'Use libtool'.
+
+	* src/connection.h, src/ftp.c, src/ftp.h, src/misc.c, src/misc.h,
+	  src/prozilla.h: Use boolean instead of int where appropriate.
+
+	* src/debug.c: (proz_debug): Automatically add a '\n' to every
+	  debug-message, so you dont need to write proz_debug("foo\n") anymore.
+
+	* src/ftp.c: Log every message sent and received with proz_debug().
+
+	* src/prozilla.h: Set MAX_MSG_SIZE to 2048.
+
+Thu Apr 19 06:39:55 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* AUTHORS: Added Michael Duelli <m.duelli@web.de>.
+
+	* docs/HACKING: Removed ftpparse.[ch] from the
+	  'Code from other projects' list. Added URL to glibc download.
+
+	* src/ftp.c, src/ftp.h: Cosmetic changes.
+
+	* src/ftpparse.c: Brought up to current coding style standards etc...
+	  Include common.h. Added some 'const's where appropriate.
+	  Return boolean instead of int in some functions.
+	  (main): Simplified code a bit. Use EXIT_SUCCESS.
+
+	* src/ftpparse.h: Changed prototypes to also show variable names.
+	  Added '#ifndef FTPPARSE_H' etc. to prevent multiple inclusions.
+
+2001-04-19    <kalum@delrom.ro>
+
+	* src/ftpparse.h src/ftpparse.c: Removed the offending DJB created
+	  files and added Michaels versions which were written from 
+          scratch.
+
+Wed Apr 18 22:36:49 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* Makefile.am: Added docs to SUBDIRS.
+
+	* Makefile.in, config.h.in, configure: Autogenerated.
+
+	* README: Moved CVS info into docs/HACKING.
+
+	* configure.in: Added docs/Makefile to AC_OUTPUT().
+
+	* docs/HACKING, docs/Makefile.am, docs/Makefile.in: Added files.
+
+	* src/connection.c, src/connection.h, src/ftp.c, src/ftp.h, src/test.c:
+	  Renamed connection_info to connection_t.
+
+	* src/main.c: Renamed some variables. Added a few comments.
+
+	* src/prozilla.h: Removed unused prototypes proz_set_http_proxy()
+	  and proz_set_ftp_proxy().
+
+Wed Apr 18 19:58:54 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* src/connect.c, src/connection.h, src/ftp.h, src/misc.h:
+	  Cosmetic changes.
+
+	* src/debug.c, src/debug.h: Made debug_mutex static. Renamed some
+	  variables.
+
+	* src/ftp.c, src/ftp.h: Changed several 'char *' to 'const char *'.
+	  (get_ftp_return): Renamed to ftp_get_return().
+	  (ftp_send_msg): Renamed some variables. Added missing va_end().
+	  (ftp_login): Replaced those ugly if-else-chains with switch
+	  constructs, which are more readable IMHO.
+	  (use_ftp_proxy): Renamed to ftp_use_proxy().
+	  (proz_ftp_get_url_info): Renamed to ftp_get_url_info().
+
+	* src/prozilla.h: Removed unused prototypes for proz_use_http_proxy()
+	  and proz_use_ftp_proxy().
+
+2001-04-18    <kalum@delrom.ro>
+
+	* src/ftp.c (ftp_login): added sevral "\r\n"'s where I had
+          forgotten to put them :(
+
+2001-04-18    <kalum@delrom.ro>
+
+	* src/ftp.c (ftp_login): Added proxy support :)
+
+2001-04-17    <kalum@delrom.ro>
+
+	* src/ftp.c (ftp_send_msg): changed the prototype to uerr_t
+         ftp_send_msg(connection_info *connection, const char *cmdspec,
+	  ...)
+
+	* src/prozilla.h: Added data type longstring 1024 bytes
+
+	* src/connection.h (connection_info): changed the type of
+          xxx_proxy to a pointer, proxy_info *
+
+Tue Apr 17 13:38:35 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* config.h.in, configure, src/Makefile.in: Autogenerated.
+
+	* configure.in: Check for lots more #include files.
+
+	* src/Makefile.am: Added several missing files to
+	  libprozilla_a_SOURCES.
+
+	* src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+	  src/debug.c, src/debug.h, src/download.c, src/download.h, src/ftp.c,
+	  src/ftp.h, src/main.c, src/misc.c, src/misc.h, src/netrc.c,
+	  src/netrc.h, src/prozilla.h, src/test.c, src/url.c, src/url.h:
+	  Put all system #includes in src/common.h and just include "common.h".
+
+	* src/ftp.c: Coding style fixes.
+
+	* src/prozilla.h: Moved the #defines TRUE and FALSE to src/common.h.
+
+	* src/common.h: Added file. Contains all necessary system #includes,
+	  typedefs a 'boolean' type, conditionally #defines vsnprintf() and
+	  snprintf() to __vsnprintf() and __snprintf() if necessary and
+	  also #defines YES and NO.
+
+2001-04-17    <kalum@delrom.ro>
+
+	* src/ftp.c (use_ftp_proxy): added this func which is self
+	  explanatory ;)
+
+	* src/prozilla.h: Added several enums to proxy_type to describe
+	  various proxies.
+
+2001-04-16    <kalum@delrom.ro>
+
+	* src/test.c: added config.h to test.c
+
+Mon Apr 16 21:28:31 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* acinclude.m4: Remove CVS Id tags.
+
+	* aclocal.m4, config.h.in, configure: Regenerated automatically.
+
+	* configure.in: Check for strchr() and strrchr().
+
+	* src/connect.c, src/connect.h: Include <sys/types.h>. The second
+	  argument of connect_to_server() is 'const char *' now.
+
+	* src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+	  src/debug.c, src/ftp.c, src/ftp.h, src/main.c, src/misc.c,
+	  src/misc.h, src/netrc.c, src/netrc.h, src/prozilla.h, src/test.c,
+	  src/url.c, src/url.h: Coding style and indentation changes.
+
+	* src/download.c: Include <config.h>.
+
+	* src/download.h: Prevent multiple inclusions...
+
+	* src/ftp.c, src/ftp.h: Removed the 'len' argument of ftp_send_msg(),
+	  because it's always strlen(connection->szBuffer).
+
+Mon Apr 16 15:32:43 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* TODO: Added 'Bandwidth throttling'.
+
+	* aclocal.m4, config.h.in, configure: Automatically generated.
+
+	* configure.in: Check for pwd.h, strtol(), strncasecmp(), snprintf(),
+	  vsnprintf(), __snprintf() and __vsnprintf(). Remove checks for
+	  strstr() and gettimeofday() because we don't use them anywhere.
+
+	* src/ftp.c, src/main.c, src/misc.c, src/misc.h, src/netrc.c,
+	  src/url.c, src/url.h: Renamed nstrdup() to kstrdup() to be
+	  consistent with kmalloc() and krealloc()...
+
+	* src/main.c, src/prozilla.h: Remove useless includes.
+	  (proz_shutdown): Now returns void. (proz_die): Exit with
+	  EXIT_FAILURE not with EXIT_SUCCESS.
+
+Mon Apr 16 09:14:52 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* aclocal.m4, config.h.in, configure, src/Makefile.in:
+	  Automatically generated.
+
+	* configure.in: Added configure option --enable-compiler-warnings.
+	  Possible arguments are no/min/yes. Default is min.
+
+	* src/Makefile.am: Commented out variable settings, they don't seem
+	  to be necessary. I'm not sure, though...
+
+	* src/connect.c, src/misc.c: Added/fixed a few comments.
+
+	* src/ftp.c, src/main.c: Use nstrdup() instead of strdup().
+
+	* src/main.c: (set_defaults): Removed because it was empty.
+
+	* src/test.c: Added several includes, so it now compiles with
+	  --enable-compiler-warnings=yes.
+
+Mon Apr 16 08:07:10 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+	  src/debug.c, src/download.c, src/download.h, src/ftp.c, src/ftp.h,
+	  src/ftpparse.h, src/main.c, src/misc.c, src/misc.h, src/netrc.c,
+	  src/netrc.h, src/prozilla.h, src/url.c, src/url.h:
+	  Cosmetic changes, mostly of the CVS 'Id' tag and its location.
+
+	* src/debug.h, src/test.c: Replaced the CVS 'Revision' tag with
+	  the 'Id' tag.
+
+	* src/main.c: (proz_init): Use kmalloc() instead of malloc().
+	  (proz_die): Fix possible buffer overflow by using vsnprintf() instead
+	  of vsprintf().
+
+2001-04-15    <kalum@delrom.ro>
+
+	* src/prozilla.h: added home_dir and netrc_list to libprozinfo struct
+
+	* src/connection.h: added is_dir, is_file etc, to connetion.h to
+	  provide information about the url.
+	
+	* Removed the $log entries, now the only cvs info is the Id
+	  tag
+
+Sat Apr 14 20:34:41 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* TODO, src/netrc.h, src/url.h: Cosmetic changes.
+
+	* acconfig.h, configure.in: Check for socklent_t by calling
+	  TYPE_SOCKLEN_T.
+
+	* acinclude.m4: Added TYPE_SOCKLEN_T.
+
+	* aclocal.m4, config.h.in, configure: Automatically generated.
+
+	* src/debug.c: (proz_debug): Fix a possible buffer overflow by using
+	  vsnprintf() instead of vsprintf().
+
+	* src/netrc.c: Include <config.h>. Don't use error_at_line().
+	  Remove all code enclosed by '#ifdef STANDALONE' and '#endif',
+	  because we don't use this code standalone...
+
+	* src/netrc.c, src/url.c: Properly check whether to include
+          <string.h> or <strings.h> or <memory.h>.
+
+Sat Apr 14 17:34:23 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+        * Makefile.am, Makefile.in: Removed unnecessary DIST_SUBDIRS.
+
+        * Makefile.in, aclocal.m4, config.h.in, configure, mkinstalldirs,
+          src/Makefile.in: Regenerated automatically.
+
+        * configure.in: Added standard GPL-header. Require at least
+          autoconf 2.13. Removed AM_SANITY_CHECK. Added lots of checks, e.g.
+          for -lnsl or -lsocket (which is needed on some systems e.g. Solaris).
+          Check for headers (memory.h string.h time.h fcntl.h assert.h).
+          Removed AC_FUNC_SETVBUF_REVERSED. Cosmetic changes.
+
+        * src/Makefile.am: Cosmetic changes.
+
+        * src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+          src/ftp.c, src/main.c, src/misc.c, src/misc.h, src/prozilla.h:
+          Removed unnecessary includes, added missing includes. Properly check
+          whether to include <string.h> or <strings.h> or <memory.h>.
+          Check whether to include <time.h> or <sys/time.h> or both.
+
+        * src/ftp.c, src/ftp.h: (get_ftp_return): Make it a static function.
+          (ftp_send_msg): Second argument is 'unsigned int' instead of 'int'
+          now. (ftp_get_reply): Make it a static function.
+	  Added missing prototype for proz_ftp_get_url_info().
+
+	* acinclude.m4, acconfig.h: Added files.
+
+	* man/Makefile: Removed file.
+
+2001-04-14    <kalum@delrom.ro>
+
+	* src/ftp.c (proz_ftp_get_url_info): Creating a function to fetch info about ftp url's
+	* Cleaned up the cvs logs in files 
+
+2001-04-13    <kalum@delrom.ro>
+
+	* Added src/download.c and src/download.h
+
+	* src/connection.h: added use_http_proxy and use_ftp_proxy to the connection structure.
+
+Fri Apr 13 18:08:52 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* README: Removed info about the prozilla mailinglist because it
+	  has been removed. All the subscribers are in the prozilla-users
+	  mailinglist now.
+
+	* src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+	  src/ftp.c, src/ftp.h, src/main.c, src/misc.c, src/misc.h,
+	  src/prozilla.h, src/test.c: Cosmetic changes.
+
+	* src/connect.c: Call socket() with the third argument being
+	  IPPROTO_TCP instead of 0. Do not cast result of krealloc().
+	  (accept_connection): Removed, because it is not used anywhere.
+
+	* src/debug.c, src/debug.h: Renamed debug_prz() to proz_debug().
+
+	* src/ftp.c: Make BUFFER_SIZE a #define (not a const int).
+	  Do not cast the result of alloca(). Remove all those sizeof(char)
+	  multiplications, because sizeof(char) is '1' per definition.
+
+Fri Apr 13 16:08:07 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* ChangeLog, src/connect.c, src/connect.h, src/connection.c,
+	  src/connection.h, src/debug.c, src/debug.h, src/download.c,
+	  src/download.h, src/ftp.c, src/ftp.h, src/main.c, src/misc.c,
+	  src/misc.h, src/prozilla.h, src/test.c:
+	  Cosmetic changes. Use the same GPL-header in all files.
+
+	* src/connect.c, src/ftp.c, src/misc.c, src/netrc.c, src/url.c:
+	  Removed unnecessary casts of the result of kmalloc().
+
+	* src/main.c: Removed unnecessary includes of <ncurses.h> and
+	  <curses.h>.
+
+2001-04-13    <kalum@delrom.ro>
+
+	* src/prozilla.h: The library functions will be in the form of proz_xxx
+	(struct): added the structure proxy_info
+
+	* src/prozilla.h: moved the definition of  struct _urlinfo from url.h to prozilla.h
+
+Thu Apr 12 15:55:04 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* AUTHORS, NEWS, README: Wrote initial documentation.
+
+	* TODO: Added file.
+
+	* src/connect.c, src/connect.h, src/connection.c, src/connection.h,
+	  src/debug.c, src/debug.h, src/ftp.c, src/ftp.h, src/main.c,
+	  src/misc.h, src/prozilla.h, src/url.c, src/url.h: Cosmetic changes.
+
+	* src/connection.h: Removed two C++ style comments.
+
+	* src/main.c: Added two missing 'void's in function declarations.
+	  Call exit() with EXIT_SUCCESS as parameter, not with 0.
+
+	* src/test.c: Added the standard GPL-header. Use EXIT_SUCCESS.
+
+Thu Apr 12 14:46:32 CEST 2001 Uwe Hermann <uh1763@hermann-uwe.de>
+
+	* src/misc.c, src/misc.h: Removed unnecessary includes <malloc.h> and
+	  <curses.h>. (kmalloc): If size is zero, return NULL. The
+	  error-message now prints the number of bytes you tried to allocate.
+	  (is_number): The argument is 'const' now. Empty strings count as
+	  non-number. 
+
+2001-03-26    <kalum@delrom.ro>
+	* src/ftp.h: struct ftp_connection_info was added.
+
+2001-03-18    <kalum@delrom.ro>
+
+	* configure.in: Calls the autoconf macro AC_caolan_FUNC_WHICH_GETHOSTBYNAME_R.
+
+	* src/connect.c: Added a gethostname_r wrapper called  k_gethostname, and added autoconf support for 5 or 6 args for it.
+
+2001-03-14    <kalum@delrom.ro>
+
+	* src/connect.c (connect_to_server): changed the data type for the timeout argument to struct timeval 
+
+2001-03-13    <kalum@delrom.ro>
+
+	* src/misc.c (get_prefixed_file): uncommented it, we need to do something about the runtime structure, like havng libprozillas own runtime structure.

@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Todo
+-------------------------------------------------------------------------------
+
+ * FIXED: Look into "Average Speed" way off on resumes.
+ * Look into making the downloaded file's date/time match the remote file
+ * Check the Remotely exploitable format string in 1.3
+ * Check the handling of bad Commandline options in 1.3
+ * Take a look at the k variable in the mass_ping request, upgrade url.c 
+to latest versions, move all the logfile locks to a single section, 
+there is no need for seperate mutex loxks etc. 
+
+ * Write or generate API documentation.
+
+ * Honor the environment variables http_proxy and ftp_proxy. 
+   NOTE: Should this be part of libprozilla or the interface?
+   Grendel: I think this should be part of the interface, the interface 
+can allways tell libprozilla the proxy to use.	
+
+ * Port to other platforms than GNU/Linux, e.g. SunOS/Solaris, FreeBSD etc...
+
+ * Add cookies support.
+ 
+ * Make the threads download to a single file, will need a state monitor
+   which saves the state of each thread to resume properly. 
+Note:libprozilla already does this.	
+
+ * Bandwidth throttling? Note:ALready done.
+
+ * Use libtool.
+
+ * I need to stat the file's size, so we have to check and include
+    sys/stat.h in common.h
+
+ * DONE: refreer support ftp
+
+ * The FTP through HTTP proxying needs a bit of chechin on how it would
+  handle login rejection attempts when the ftp server disallows it
+
+  * DONE: write a function for getting the version of libprozilla

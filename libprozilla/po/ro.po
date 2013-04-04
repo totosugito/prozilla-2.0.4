@@ -1,0 +1,775 @@
+# Romanian messages for libprozilla.
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Flower <flower_os@yahoo.com>, 2001.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: libprozilla 0.0.1\n"
+"POT-Creation-Date: 2001-08-18 04:26+0300\n"
+"PO-Revision-Date: 2001-08-19 13:11+0300\n"
+"Last-Translator: Flower <flowetr_os@yahoo.com>\n"
+"Language-Team: RTFS <rtfs-project@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+ 
+#: src/connection.c:157 src/connection.c:247
+#, c-format
+msgid "Unable to open file %s: %s!"
+msgstr "Nu pot deschide fiºierul %s: %s!"
+ 
+#: src/connection.c:179 src/connection.c:294
+msgid "write failed"
+msgstr "scriere eºuatã"
+ 
+#: src/connection.c:182 src/connection.c:297
+#, c-format
+msgid "Unable to write to file %s: %s!"
+msgstr "Nu pot scrie în fiºierul %s: %s!"
+ 
+#: src/connection.c:205 src/connection.c:278
+msgid "connection timed out"
+msgstr "timpul conexiunii a expirat"
+ 
+#: src/connection.c:216 src/connection.c:317
+#, c-format
+msgid "download for this connection completed %s : %ld received"
+msgstr "descãrcarea pentru aceastã conexiune s-a încheiat %s : %ld receptionaþi"
+ 
+#: src/connection.c:269
+msgid "Server Closed Connection Prematurely!"
+msgstr "Serverul a închis prematur conexiunea!"
+ 
+#: src/connection.c:375
+#, c-format
+msgid "orig start pos= %d\n"
+msgstr "poz orig de pornire= %d\n"
+ 
+#: src/connection.c:406
+msgid "Idle"
+msgstr "liber"
+ 
+#: src/connection.c:409
+msgid "Connecting"
+msgstr "Conectare"
+ 
+#: src/connection.c:412
+msgid "Logging in"
+msgstr "Autentificare"
+ 
+#: src/connection.c:415
+msgid "Downloading"
+msgstr "Descãrcare"
+ 
+#: src/connection.c:418
+msgid "Completed"
+msgstr "Terminat"
+ 
+#: src/connection.c:421
+msgid "Login Denied"
+msgstr "Login refuzat"
+ 
+#: src/connection.c:424
+msgid "Connect Refused"
+msgstr "Conexiune refuzatã"
+ 
+#: src/connection.c:427
+msgid "Remote Fatal"
+msgstr "Eroare fatalã la server"
+ 
+#: src/connection.c:430
+msgid "Local Fatal"
+msgstr "Eroare localã fatalã"
+ 
+#: src/connection.c:433
+msgid "Timed Out"
+msgstr "Timp expirat"
+ 
+#: src/connection.c:435
+msgid "Max attempts reached"
+msgstr "Numãrul maxim de încercãri a fost atins"
+ 
+#: src/connection.c:438
+msgid "Unkown Status!"
+msgstr "Stare necunoscutã"
+ 
+#: src/connection.c:520 src/misc.c:471
+msgid "Error: unsupported protocol"
+msgstr "Eroare: protocol nesuportat"
+ 
+#: src/connection.c:542
+#, c-format
+msgid "The server returned location is wrong: %s!"
+msgstr "Locaþia returnatã de server e greºitã: %s!"
+ 
+#: src/connection.c:550
+#, c-format
+msgid "Redirected to => %s"
+msgstr "Redirectat la => %s"
+ 
+#: src/debug.c:60 src/download.c:636 src/download.c:1024
+#, c-format
+msgid "unable to delete the file %s. Reason-: %s"
+msgstr "nu pot ºterge fiºierul %s. Motivul-: %s"
+ 
+#: src/download.c:171
+#, c-format
+msgid "Error while processing prior download of connection number %d"
+msgstr "Eroare la procesarea dinaintea descãrcãrii la conexiunea numarul %d"
+ 
+#: src/download.c:200
+msgid "Warning! Unable to create logfile!"
+msgstr "Atenþie! Nu pot crea fiºierul de log!"
+ 
+#: src/download.c:225 src/download.c:236 src/download.c:341 src/download.c:380
+#: src/download.c:399 src/download.c:421 src/download.c:460 src/download.c:479
+msgid "Error: Not enough system resources"
+msgstr "Eroare: Nu sunt destule resurse sistem"
+ 
+#: src/download.c:240
+msgid "Error: Unsupported Protocol was specified"
+msgstr "Eroare: A fost specificat un protocol nesuportat"
+ 
+#: src/download.c:244
+msgid "All threads created"
+msgstr "Toate firele au fost create"
+ 
+#: src/download.c:321
+#, c-format
+msgid "Connection %d, had a local fatal error: %s .Aborting download. "
+msgstr "În conexiunea %d, a apãrut o eroare localã fatalã: %s. Descãrcarea abandonatã. "
+ 
+#: src/download.c:337
+msgid "All logins rejected!.Retrying connection"
+msgstr "Toate login-urile refuzate! Reîncerc conectarea"
+ 
+#: src/download.c:376 src/download.c:395 src/download.c:456 src/download.c:475
+msgid "Relaunching download"
+msgstr "Relansez descãrcarea"
+ 
+#: src/download.c:417
+msgid "All connections attempts have been rejected!.Retrying connection"
+msgstr "Toate încercãrile de conectare au fost refuzate! Reîncerc conectarea"
+ 
+#: src/download.c:698
+#, c-format
+msgid "Unable to allocate %d bytes to recreate files"
+msgstr "Nu pot aloca %d bytes pentru a recrea fiºierul"
+ 
+#: src/download.c:716
+#, c-format
+msgid "Error: unable to open the file %s for writing-: %s\n"
+msgstr "Eroare: nu pot deschide fiºierul %s pentru scriere-: %s\n"
+ 
+#: src/download.c:735
+#, c-format
+msgid "Error: Unable to open the file %s for reading-: %s\n"
+msgstr "Eroare: Nu pot deschide fiºierul %s pentru citire-: %s\n"
+ 
+#: src/download.c:773
+#, c-format
+msgid "Unable to delete the file %s before exiting. Reason-: %s"
+msgstr "Nu pot ºterge fiºierul %s înainte de ieºire. Motiv-: %s"
+ 
+#: src/download.c:780
+#, c-format
+msgid "Error:A write error occured while writing to %s -: %s\n"
+msgstr "Eroare: O eroare de scriere a apãrut în timp ce scriam în %s-: %s\n"
+ 
+#: src/download.c:795
+#, c-format
+msgid "Successfully Wrote  %s \n"
+msgstr "Am scris %s\n"
+ 
+#: src/ftp.c:106
+#, c-format
+msgid "Message = %s"
+msgstr "Mesaj = %s"
+ 
+#: src/ftp.c:126
+#, c-format
+msgid "Error checking for FTP data: %s"
+msgstr "Eroare la verificarea datelor FTP: %s"
+ 
+#: src/ftp.c:143
+#, c-format
+msgid "Error receiving FTP data: %s"
+msgstr "Eroare la recepþionarea datelor FTP: %s"
+ 
+#: src/ftp.c:167
+#, c-format
+msgid "Sending:  %s"
+msgstr "Trimit: %s"
+ 
+#: src/ftp.c:172
+#, c-format
+msgid "Error sending FTP data: %s"
+msgstr "Eroare la trimiterea datelor FTP: %s"
+ 
+#: src/ftp.c:213
+#, c-format
+msgid "Received: %s"
+msgstr "Am primit: %s"
+ 
+#: src/ftp.c:344
+#, c-format
+msgid "FTP PASV Header = %s"
+msgstr "Headerul FTP PASV = %s"
+ 
+#. Unknown error code.
+#: src/ftp.c:759
+#, c-format
+msgid "Unknown code %d retuned during FTP login"
+msgstr "Cod necunoscut %d primit în timpul autentificãrii FTP"
+ 
+#: src/ftp.c:811 src/ftp.c:831 src/http-retr.c:69 src/http-retr.c:84
+#: src/http.c:562 src/http.c:577
+#, c-format
+msgid "Connecting to %s"
+msgstr "Conectare la %s"
+ 
+#: src/ftp.c:822 src/ftp.c:840
+#, c-format
+msgid "Error while connecting to %s"
+msgstr "Eroare în timpul conectãrii la"
+ 
+#: src/ftp.c:827 src/ftp.c:844
+#, c-format
+msgid "Connected to %s"
+msgstr "Conectat la %s"
+ 
+#: src/ftp.c:870
+#, c-format
+msgid "Logging in as user %s with password %s"
+msgstr "Autentificare ca utilizator %s cu parola %s"
+ 
+#: src/ftp.c:882
+msgid "Logged in successfully"
+msgstr "Autentificare reuºitã"
+ 
+#: src/ftp.c:902
+#, c-format
+msgid "CWD failed to change to directory '%s'"
+msgstr "CWD a eºuat sã schimbe directorul '%s'"
+ 
+#: src/ftp.c:911
+msgid "CWD not needed"
+msgstr "Nu e nevoie de CWD"
+ 
+#: src/ftp.c:918
+msgid "REST failed"
+msgstr "REST eºuat"
+ 
+#: src/ftp.c:923
+msgid "REST ok"
+msgstr "REST ok"
+ 
+#: src/ftp.c:1003
+#, c-format
+msgid "Error receiving FTP transfer data: %s"
+msgstr "Eroare la recepþionarea datelor de transfer FTP: %s"
+ 
+#: src/ftp.c:1008
+#, c-format
+msgid "String received after the LIST command = %s"
+msgstr "String recepþionat dupã comanda LIST = %s"
+ 
+#: src/ftp.c:1026
+msgid ""
+"Unable to parse the line the FTP server returned:please report URL to "
+"kalum@delrom.ro "
+msgstr "Nu pot parsa linia pe care a returnat-o serverul FTP: vã rugãm "
+"raportaþi URL-ul la prozilla-users@delrom.ro"
+ 
+#: src/ftp.c:1053
+msgid "Server doesn't seem to support PASV"
+msgstr "Serverul nu pare sã suporte PASV"
+ 
+#: src/ftp.c:1129
+#, c-format
+msgid "Retrying attempt %d in %d seconds"
+msgstr "Reîncercarea numarul %d în %d secunde"
+ 
+#: src/ftp.c:1148 src/http.c:734
+msgid "Seccessfully got info"
+msgstr "Informaþiile au fost obþinute"
+ 
+#: src/ftp.c:1156 src/http.c:746
+msgid "File not found!"
+msgstr "Fiºier negãsit!"
+ 
+#: src/ftp-retr.c:321 src/ftp.c:1175 src/http-retr.c:333 src/http.c:765
+#, c-format
+msgid "I have tried %d attempt(s) and have failed, aborting"
+msgstr "Am fãcut %d încercãri ºi am eºuat, abandonez"
+ 
+#: src/ftpparse.c:194
+#, c-format
+msgid "MULTINET Size: %d\n"
+msgstr "Mãrimea MULTINET: %d\n"
+ 
+#: src/ftpparse.c:235
+#, c-format
+msgid "BINLS size: %d\n"
+msgstr "Mãrimea BINLS: %d\n"
+ 
+#: src/ftp-retr.c:125
+#, c-format
+msgid "Logging in as user %s with password %s."
+msgstr "Autentificare ca utilizator %s cu parola %s."
+ 
+#: src/ftp-retr.c:165
+#, c-format
+msgid "CWD failed to change to directory '%s'."
+msgstr "CWD a eºuat sã schimbe directorul '%s'."
+ 
+#: src/ftp-retr.c:171
+msgid "CWD ok."
+msgstr "CWD ok"
+ 
+#: src/ftp-retr.c:175
+msgid "CWD not needed."
+msgstr "Nu e nevoie de CWD."
+ 
+#: src/ftp-retr.c:196
+msgid ""
+"I have a bug in my  code!!, check remote_starpos and resume_support values"
+msgstr ""
+"Am o eroare în cod!!, verificaþi valorile pentru remote_starpos ºi resume_support"
+ 
+#: src/ftp-retr.c:206
+msgid "RETR failed"
+msgstr "RETR eºuat"
+ 
+#: src/ftp-retr.c:261
+#, c-format
+msgid "Retrying..Attempt %d in %d seconds"
+msgstr "Reîncerc... Încercarea %d în %d secunde"
+ 
+#: src/ftp-retr.c:273 src/http-retr.c:286
+msgid "Error while attemting to process download file "
+msgstr "Eroare la încercarea de a procesa fiºierul descãrcat "
+ 
+#: src/ftp-retr.c:304 src/http-retr.c:313
+msgid "Seccessfully got download"
+msgstr "Descãrcare reuºitã"
+ 
+#: src/ftp-retr.c:310
+msgid "Error occured in connection..."
+msgstr "A apãrut o eroare în conexiune..."
+ 
+#: src/getopt.c:741
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: opþiunea `%s' e ambiguã\n"
+ 
+#: src/getopt.c:769
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: opþiunea `--%s' nu permite argument\n"
+ 
+#: src/getopt.c:776
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: opþiunea `%s%s' nu permite argument\n"
+ 
+#: src/getopt.c:792 src/getopt.c:995
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: opþiunea `%s' necesitã argument\n"
+ 
+#.
+#. * --option
+#.
+#: src/getopt.c:825
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: opþiune nerecunoscutã `--%s'\n"
+ 
+#.
+#. * +option or -option
+#.
+#: src/getopt.c:831
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: opþiune nerecunoscutã `%c%s'\n"
+ 
+#.
+#. * 1003.2 specifies the format of this message.
+#.
+#: src/getopt.c:863
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opþiune ilegalã -- %c\n"
+ 
+#: src/getopt.c:865
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: opþiune eronatã -- %c\n"
+ 
+#: src/getopt.c:902 src/getopt.c:1051
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: opþiunea necesitã argument -- %c\n"
+ 
+#: src/getopt.c:961
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: opþiunea `-W %s' e ambiguã\n"
+ 
+#: src/getopt.c:981
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: opþiunea `-W %s' nu permite argument\n"
+ 
+#: src/getopt.c:1118
+msgid "digits occur in two different argv-elements.\n"
+msgstr "apar cifre în douã elemente argv diferite.\n"
+ 
+#: src/getopt.c:1124
+msgid "option a\n"
+msgstr "opþiunea a\n"
+ 
+#: src/getopt.c:1128
+msgid "option b\n"
+msgstr "opþiunea b\n"
+ 
+#: src/getopt.c:1132
+#, c-format
+msgid "option c with value `%s'\n"
+msgstr "opþiunea c cu valoarea `'%s'\n"
+ 
+#: src/getopt.c:1139
+#, c-format
+msgid "?? getopt returned character code 0%o ??\n"
+msgstr "?? getopt a întors cudul caracter 0%o ??\n"
+ 
+#: src/getopt.c:1145
+msgid "non-option ARGV-elements: "
+msgstr "elemente ARGV care nu­s opþiuni: "
+ 
+#: src/http.c:376
+msgid "Failed writing HTTP request"
+msgstr "Scrierea cererii HTTP a eºuat"
+ 
+#: src/http.c:397
+#, c-format
+msgid "Header = %s"
+msgstr "Header = %s"
+ 
+#: src/http.c:401
+msgid "End of file while parsing headers"
+msgstr "Sfãrºitul fiºierul la parsarea headerului"
+ 
+#: src/http.c:412
+msgid "Read error in headers"
+msgstr "Eroare de citire în headere"
+ 
+#. Store the descriptive response.
+#. Malformed request.
+#: src/http.c:438
+msgid "UNKNOWN"
+msgstr "NECUNOSCUT"
+ 
+#: src/http.c:440
+msgid "(no description)"
+msgstr "(fãrã descriere)"
+ 
+#: src/http-retr.c:77 src/http-retr.c:91 src/http-retr.c:395 src/http.c:571
+#: src/http.c:583 src/http.c:801
+#, c-format
+msgid "Error connecting to %s"
+msgstr "Eroare de conectare la %s"
+ 
+#: src/http-retr.c:119 src/http-retr.c:422 src/http.c:611 src/http.c:828
+#, c-format
+msgid "Authenticating as user %s password %s"
+msgstr "Autentificare ca utilizator %s cu parola %s"
+ 
+#: src/http-retr.c:120 src/http-retr.c:423 src/http.c:612 src/http.c:829
+#, c-format
+msgid "Authentification string=%s"
+msgstr "Stringul de autentificare=%s"
+ 
+#: src/http-retr.c:198 src/http-retr.c:478 src/http.c:682
+msgid "Sending HTTP request"
+msgstr "Trimit cererea HTTP"
+ 
+#: src/http-retr.c:274 src/http.c:717
+#, c-format
+msgid "Retrying...Attempt %d in %d seconds"
+msgstr "Reîncerc... Încercarea a %s-a în %d secunde"
+ 
+#: src/http-retr.c:306
+msgid "Will be hanled in main "
+msgstr "Va fi tratat în main "
+ 
+#: src/logfile.c:49
+#, c-format
+msgid "Error opening file %s for writing: %s"
+msgstr "Eroare la deschiderea fiºierului %s pentru scriere: %s"
+ 
+#: src/logfile.c:65 src/logfile.c:75 src/logfile.c:93 src/logfile.c:104
+#: src/logfile.c:115
+#, c-format
+msgid "Error writing to file %s: %s"
+msgstr "Eroare la scrierea în fiºierul %s: %s"
+ 
+#: src/logfile.c:168
+msgid "logfile doesn't exist"
+msgstr "Fiºierul de log nu existã"
+ 
+#: src/logfile.c:198
+#, c-format
+msgid "Error opening file %s for reading: %s"
+msgstr "Eroare la deschiderea pentru citire a fiºierului %s : %s"
+ 
+#: src/logfile.c:232 src/logfile.c:244 src/logfile.c:256
+#, c-format
+msgid "Error reading from file %s: %s"
+msgstr "Eroare la citirea din fiºierul %s: %s"
+ 
+#: src/misc.c:48
+#, c-format
+msgid "Failed to malloc() %lu bytes."
+msgstr "malloc() pentru %lu bytes a eºuat."
+ 
+#: src/misc.c:63
+#, c-format
+msgid "Failed to realloc() %lu bytes."
+msgstr "realloc() pentru %lu bytes a eºuat."
+ 
+#: src/misc.c:85
+msgid "Not enough memory to continue: strdup() failed."
+msgstr "Nu este destulã memorie pentru a continua: strdup() a eºuat."
+ 
+#: src/misc.c:304
+msgid "Warning: Unable to delay"
+msgstr "Atenþie: aºteptarea nu e posibilã"
+ 
+#: src/misc.c:326
+msgid "Unable to lookup hostname"
+msgstr "Nu se poate rezolva numele"
+ 
+#: src/misc.c:328
+msgid "Unable to create socket"
+msgstr "Nu pot crea socket-ul"
+ 
+#: src/misc.c:330
+msgid "Error occured while connecting"
+msgstr "A apãrut o eroare la conectare"
+ 
+#: src/misc.c:332
+msgid "The cconnection attempt was refused"
+msgstr "Încercarea de conectare a fost refuzatã"
+ 
+#: src/misc.c:334
+msgid "Error while accepting the connection"
+msgstr "Eroare la acceptarea conexiunii"
+ 
+#: src/misc.c:336
+msgid "Error while Binding socket"
+msgstr "Eroare la conectarea socket-ului"
+ 
+#: src/misc.c:338
+msgid "Error while listening"
+msgstr "Eroare la ascultare"
+ 
+#: src/misc.c:340
+msgid "The connection was reset/closed by the peer"
+msgstr "Conexiunea a fost resetatã/închisã de partener"
+ 
+#: src/misc.c:342
+msgid "The URL Protocol was unknown"
+msgstr "Protocolul URL a fost necunoscut"
+ 
+#: src/misc.c:344
+msgid "The port specified in the URL is not valid!"
+msgstr "Portul specificat in URL nu este valid!"
+ 
+#: src/misc.c:346
+msgid "The Hostname specified in the URL is not valid!"
+msgstr "Numele de host specificat in URL nu este valid!"
+ 
+#: src/misc.c:348
+msgid "The Pattern specified in the URL does not look valid!"
+msgstr "Paternul specificat în URL nu pare valid!"
+ 
+#: src/misc.c:350
+msgid "End of file reached in HTTP connection"
+msgstr "Sfãrºit de fiºier în conexiunea HTTP"
+ 
+#: src/misc.c:352
+msgid "Error occured in HTTP data transfer"
+msgstr "Eroare la transferul datelor HTTP"
+ 
+#: src/misc.c:354
+msgid "Authentification is required to access this resource"
+msgstr "Este nevoie de autentificare pentru accesarea acestei resurse"
+ 
+#: src/misc.c:356
+msgid "Failed to Authenticate with host!"
+msgstr "A eºuat autentificarea la server!"
+ 
+#: src/misc.c:358
+msgid "The URL was not found on the host!"
+msgstr "URL-ul nu a fost gãsit în host!"
+ 
+#: src/misc.c:360
+msgid "The host disallowed the login attempt"
+msgstr "Gazda nu a permis încercarea de logare"
+ 
+#: src/misc.c:362
+msgid "The PORT request was rejected by the server"
+msgstr "Cererea de PORT a fost respinsã de server"
+ 
+#: src/misc.c:364
+msgid "The object file/dir was not found on the host!"
+msgstr "Obiectul fiºier/director nu a fost gãsit pe server!"
+ 
+#: src/misc.c:366
+msgid "The TYPE specified in not known by the FTP server!"
+msgstr "Tipul specificat de TYPE nu e cunoscut de serverul de FTP!"
+ 
+#: src/misc.c:368
+msgid "The command is not known by the FTP server!"
+msgstr "Comanda nu este cunoscutã de serverul de FTP!"
+ 
+#: src/misc.c:370
+msgid "The SIZE command failed"
+msgstr "Comanda SIZE a eºuat"
+ 
+#: src/misc.c:372
+msgid "Error occured in FTP data transfer"
+msgstr "A apãrut o eroare la transferul datelor FTP"
+ 
+#: src/misc.c:374
+msgid "The REST command failed"
+msgstr "Comanda REST a eºuat"
+ 
+#: src/misc.c:376
+msgid "The peer did not allow access"
+msgstr "Partenerul nu permite accesul"
+ 
+#: src/misc.c:378 src/misc.c:380
+msgid "The host rejected the password"
+msgstr "Serverul nu acceptã parola"
+ 
+#: src/misc.c:382
+msgid "The PASV (passive mode) was not supported the host"
+msgstr "PASV (mod pasiv) nu este suportat de server"
+ 
+#: src/misc.c:384
+msgid "The host does not support PASV (passive mode) transfers"
+msgstr "Serverul nu suportã transferuri PASV (mod pasiv)"
+ 
+#: src/misc.c:386
+msgid "The connection attempt was refused"
+msgstr "Încercarea de conectare a fost refuzatã"
+ 
+#: src/misc.c:388
+msgid "Failed to (CWD)change to the directory"
+msgstr "A eºuat (CWD) schimbarea directorului"
+ 
+#: src/misc.c:392
+msgid ""
+"The host said the requested service was unavailable and closed the control "
+"connection"
+msgstr ""
+"Serverul a spus cã serviciul solocitat nu este disponibil ºi a închis"
+"conexiunea de control"
+ 
+#: src/misc.c:394
+msgid "getsockname failed!"
+msgstr "getsockname a eºuat!"
+ 
+#: src/misc.c:399
+msgid ""
+"The server, while acting as a gateway or proxy, received an invalid response "
+"from the upstream server it accessed in attempting to fulfill the request"
+msgstr ""
+"Serverul, lucrând ca gateway sau ca proxy, a primit un rãspuns invalid "
+"de la serverul de legaturã pe care l­a accesat ca sã îndeplineascã cererea"
+ 
+#: src/misc.c:404
+msgid ""
+"The server is currently unable to handle the request due to a temporary "
+"overloading or maintenance of the server."
+msgstr ""
+"Serverul nu poate sã rezolve cererea acum datoritã unei supraîncarcãri "
+"temporare sau a unor activitãþi de întreþinere."
+ 
+#: src/misc.c:409
+msgid ""
+"The server, while acting as a gateway or proxy, received an invalid response "
+"from the upstream server it accessed in attempting to fulfill the request."
+msgstr ""
+"Serverul, lucrãnd ca gateway sau ca proxy, a primit un rãspuns invalid "
+"de la serverul de legãturã pe care l­a accesat ca sã îndeplineascã cererea."
+ 
+#: src/misc.c:414
+msgid ""
+"The server encountered an unexpected condition which prevented it from "
+"fulfilling the request."
+msgstr ""
+"Serverul a întãlnit o stare necunoscutã care l­a împiedicat sã "
+"îndeplineascã cererea."
+ 
+#: src/misc.c:419
+msgid ""
+"The server does not support the functionality required to fulfill the "
+"request."
+msgstr ""
+"Serverul nu suportã funcþionalitatea cerutã pentru a îndeplini "
+"cererea."
+ 
+#: src/misc.c:422
+msgid "Error while opening file"
+msgstr "Eroare la deschiderea fiºierului"
+ 
+#: src/misc.c:424
+msgid "Error while writing to file"
+msgstr "Eroare la scrierea în fiºier"
+ 
+#: src/misc.c:427
+msgid "The Download was aborted"
+msgstr "Descãrcarea a fost abandonatã"
+ 
+#: src/misc.c:429
+msgid "The Download encountered a local fatal error"
+msgstr "Descãrcarea a întãlnit o eroare localã fatalã"
+ 
+#: src/misc.c:431
+msgid "Error: Resuming this connection is not possible"
+msgstr "Eroare: Continuarea acestei conexiuni nu e posibilã"
+ 
+#: src/misc.c:433
+msgid "Error while reading data from socket"
+msgstr "Eroare la citirea datelor din socket"
+ 
+#: src/misc.c:435
+msgid "Error while writing data to socket"
+msgstr "Eroare la scrierea datelor în socket"
+ 
+#: src/misc.c:437
+msgid "Error while Proxying"
+msgstr "Eroare de proxy"
+ 
+#: src/misc.c:439
+msgid "The location is a directory"
+msgstr "Locaþia este un director"
+ 
+#: src/misc.c:442
+msgid "Unknown/Unsupported error code"
+msgstr "Cor de eroare necunoscut/nesuportat"
+ 
+#: src/netrc.c:215
+#, c-format
+msgid "%s:%d: warning: found \"%s\" before any host names\n"
+msgstr "%s:%d: atenþie: am gãsit \"%s\" înainte de orice nume de host\n"
+ 
+#: src/netrc.c:243
+#, c-format
+msgid "%s:%d: warning: unknown token \"%s\"\n"
+msgstr "%s:%d: atenþie: element necunoscut \"%s\"\n"

@@ -1,0 +1,264 @@
+This is the ProZilla Frequently-Asked Questions List.
+
+Copyright (C) 2000 Kalum Somaratna (Grendel).
+
+This FAQ list may be freely distributed with the ProZilla package or any
+part thereof, provided that this copyright notice is left intact on all
+copies.
+
+ProZilla  FAQ List
+******************
+
+ProZilla is a download accelerator for Linux, which makes multiple
+connections to the server and downloads the file in chunks thus making
+the download much faster than it would have been possible if it was done
+using a single connection based conventional method like netscape and wget
+do. In addition it supports downloading from multiple server based on 
+ftpsearch results and pinging them.
+
+Table of Contents
+*****************
+
+
+ProZilla FAQ List
+
+1 I'm in a hurry and I don't want to read all those doc's....
+
+2 What systems does it run on?
+
+3 Configuration Issues
+  3.1 What on earth hapenned to the old ProZilla config files? 	
+
+4 Downloading issues
+  4.1 ProZilla says "Resume not supported"?	
+  4.2 ProZilla is using only a single connection sometimes?
+  4.3 1 connection says "login rejected", but the rest are OK?		
+  4.4 ProZilla says "Error while getting info from the server"? 
+  4.5 ProZilla mucks up my file, it is corrupted....?
+  4.6 I want ProZilla to try infinitely because of my bad connection?
+  4.7 I am using 10 connections but I can only see 4 in the display?
+  4.8 I hate to type in the URL every time I have to download something,
+       isn't there any better way to do this? 	
+
+5 FTPSearch Issues
+  5.1 How do I do a FTP search? 
+
+6. Miscellaneous
+  6.1 Where can I get ProZilla?	
+  6.2 Bugs / Where do I post bugs?
+  
+1 I'm in a hurry and I don't want to read all those *!@! docs....
+*****************************************************************
+
+_*Q*: I want to get started immediately, tell me what to do or else.....
+
+*A*: OK, assuming that ProZilla is installed correctly using either the
+RPM's or from the source, just type 
+"proz commandline" from the command prompt, where commandline is the URL
+which you wish to download and it will begin the download.
+
+Example: 
+prozgui www.gnu.org/xxx.jpj 
+Will cause ProZilla to connect to
+gnu.org and download the file xxx.jpg and save it in to the current
+directory.
+
+2 What systems does it run on?
+*****************************************************************
+
+_*Q*: What systems does it run on?
+
+*A*: Currently it runs only on Linux, since that is the only OS that I
+have access to, apart from windoze which doesn't count as a OS anyway..;)
+
+
+3.1 Configuring ProZilla
+************************
+
+_*Q*: What on earth hapenned to the old ProZilla config files?
+
+*A*: The GUI versions store there configuration file in the ~/.prozilla 
+directory. The GUI versions ignore any /etc/prozilla.conf or 
+~/prozilla.conf.
+
+4.1  ProZilla says "Resume not supported"?
+******************************************
+
+_*Q*: Hey! Sometimes ProZilla says "Resume not supported" and proceeds
+with just a single download...what is hapenning?
+
+*A*: Well unfortunately there is no standardized way of getting the size
+of a file under the FTP protocol, many servers support the SIZE command,
+which is what ProZilla uses (and when this fails the LIST command) to get
+the file size, and this works for most FTP servers. However there are some
+very ancient FTP servers out there which don't support either of these
+popular methods, thus when ProZilla can't get the size of a file it has to
+use a single download method and get the bytes until the server says the
+end of the file has been reached.
+
+The other reason why it can say "Resume not supported" is that when the
+FTP server doesn't support the REST command, which again is a problem with
+ancient FTP servers. The REST command is used to ask the FTP server to
+restart the Download from a certain file position, and as you may see when
+the server doesn't support REST no resuming is possible.
+
+4.2 ProZilla is using only a single connection sometimes?
+*********************************************************
+
+*A*: There  are sevral reasons for this all are unavoidable.
+
+1. The server doesnt support getting the file in portions.
+
+In this case we can't split the download, and have to use a single
+conenction and get the complete file.
+
+2. We are going throuh a proxy. (you have specified a proxy) 
+
+Most proxies support specifying a range of bytes in a file to retreive, so 
+this shouldnt be a problem unless your proxy does not allwo this basic 
+functionality, if it does not support it then there is little you can do 
+except try to use another proxy server or use a direct connection.
+
+The other problem is that when you have specified the FTP proxy as a HTTP 
+proxy, most of the FTP through HTTP proxies (Squid etc) do not support 
+getting a FTP file in a range we want, so again prozilla has to use one 
+connection and worse still it cant resume either becuase the HTTP proxy 
+which is used for FTP does not support.
+
+
+4.3 1 connection says "login rejected", but the rest are OK?
+************************************************************
+
+_*Q*: While downloading with multiple connections, I see that one
+connections status is "login rejected", what do I do know, do I restart it
+or watch and see what happens.
+
+
+*A*: Please *don't* restart, just let the download proceed and you will
+see that the connection resumes after sometime when one connection has
+finished downloading it's portion.
+
+The reason is that some FTP servers administrators have disallowed more
+than n connections per IP address. where N can mean anything from 1 to the
+number of connections that ProZilla is attempting.
+
+So assuming that ProZilla is attempting to make 4 connections, and the
+sysadmin (The *beep*!) has allowed only 2 connections per IP address,
+ProZilla will begin with 2 downloads, and the FTP server will reject the
+other 2 login attempts, however ProZilla will continue, and when one of
+the current downloads has terminated, it will retry logging in and proceed
+with the download, so there is no need to restart, please allow it to
+continue.
+
+
+4.4 ProZilla says "Error while getting info from the server"?
+*************************************************************
+
+_*Q*: I tried to start a download but ProZilla aborted with the strange
+message "Error while getting info from the server", is this a bug with
+ProZilla?
+
+*A*: Well this is most probably due to a data transfer error, it maybe a
+bad connection, or a incompatible server, or it maybe that you need a
+user/name password combo to access the server. Usually there is a small
+message above this which indicates why this happened.
+
+However if another downloader like netscape or wget works with the URL and
+ProZilla does not, this is most probably a error with ProZilla and I would
+appreciate it if you could post the URL and the error you received to
+<kalum@genesys.ro>, so that it can be removed from the next release.
+
+4.5 ProZilla mucks up my file, the file is is corrupted!
+********************************************************
+
+_*Q*: I downloaded this zip(tar,gz etc) file using ProZilla and when I
+tested it on my system the file has CRC errors, is this a bug?
+
+*A*: There are three possibilities, the file on the server maybe corrupted.
+The way to do check this is download the file using a single connection,
+either using "ProZilla -1 URL" , or using GNU wget or netscape, and test
+the file, if the file still has CRC problems it means that the file on the
+server is corrupt and there is no problem with ProZilla.
+
+Another one is that you are downloading from multiple servers after a 
+ftpsearch and ping. Well if one server has a bad file then necesasrily the 
+download will be corrupted.
+
+The other possibility is that there is a bug in ProZilla, the way to check
+this is that after a single connection download, if the files CRC checks
+out correctly, and the corruption only happens when you use ProZilla, then
+it is a bug and it kindly should be reported to <kalum@genesys.ro>,with
+the URL so that it can be removed from the next release.
+
+4.6 I want ProZilla to keep on trying more than the default attempts!
+********************************************************************
+
+_*Q*: Oi! I have this really bad connection and ProZilla gets a lot of
+errors and eventually say that "connection x has been tried x number of
+times" and quits, what can I do about this! I am too lazy to get a better
+connection and I want ProZilla to continue to keep trying until it dies!
+
+*A*: There are several things that you can do, you can ask prozilla to
+make unlimited attempts at getting a succesful download, by using the
+--retries=0 options.
+
+Or you can try to increases the delay between each try by using the
+--retry-delay option, for example to make ProZilla delay 60 seconds before
+retrying a connection, please specify --retry-delay=60.
+
+4.8 I hate to type in the URL everytime I have to download something!
+*********************************************************************
+
+_*Q*: ProZilla is good but I hate to type the URL everytime I have to start
+a download, isn't there anything that I can do about this.
+
+*A*: You can in netscape select "Copy URL Location" and then open up 
+prozilla's open url dialog box and press CTRL-V to paste it in from the 
+clipboard.
+
+The other method is to ask your browser to launch prozilla whenever you
+want a URL downloaded, this can be done for galeon, and it should be
+possible on other browsers. If anyone does this please tell me the methods
+so as I can add them to this FAQ so others can do so too.
+
+5 FTPSearch
+*****************************************************************
+_*Q*: How do I run a ftpsearch, it seems to be off by default??
+
+*A*: FTPSearch can be turned on by default by clicking in the box in the 
+preferences dialog in the FTPSearch tab.
+
+
+_*Q*:What is this Pinging and why is it not working when I am using a FTP 
+Proxy?  
+
+*A*: As you know prozilla pings a list of ftpsearch returned servers to 
+determine their suitability to be used as downloads, since prozilla runs with 
+the normal user priviledges the real PING cannot be performed and thus 
+prozilla does a tcp ping to port 21 on the target server, thus if your 
+ISP/Firewall has blocked acess to port 21 on remote machines this will 
+neccessarily fail. If you have any ideas on how to solve this issue please 
+contact me.
+
+6 Miscellaneous
+*****************************************************************
+
+6.1 ProZilla homepage / Getting Prozilla
+*********************************************************
+
+_*Q*: Where is the homepage for ProZilla...
+
+*A*: http://www.prozilla.genesys.ro is the ProZilla homepage
+where you can get the latest versions and updates about ProZilla.
+
+6.2 Bugs / Where do I post bugs?
+*********************************************************
+
+_*Q*: Where do I post bugs?
+
+*A*: The prozilla developers mailing list <prozilla@genesys.ro> will 
+wellcome them. 
+
+
+
+

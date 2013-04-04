@@ -1,0 +1,750 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-28 10:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/connection.c:177 src/connection.c:274
+msgid "write failed"
+msgstr ""
+
+#: src/connection.c:180 src/connection.c:277
+#, c-format
+msgid "Unable to write to file %s: %s!"
+msgstr ""
+
+#: src/connection.c:201 src/connection.c:258
+msgid "connection timed out"
+msgstr ""
+
+#: src/connection.c:212 src/connection.c:296
+#, c-format
+msgid "download for this connection completed%s : %ld received"
+msgstr ""
+
+#: src/connection.c:249
+msgid "Server Closed Connection Prematurely!"
+msgstr ""
+
+#: src/connection.c:340
+msgid "Idle"
+msgstr ""
+
+#: src/connection.c:343
+msgid "Connecting"
+msgstr ""
+
+#: src/connection.c:346
+msgid "Logging in"
+msgstr ""
+
+#: src/connection.c:349
+msgid "Downloading"
+msgstr ""
+
+#: src/connection.c:352
+msgid "Completed"
+msgstr ""
+
+#: src/connection.c:355
+msgid "Login Denied"
+msgstr ""
+
+#: src/connection.c:358
+msgid "Connect Refused"
+msgstr ""
+
+#: src/connection.c:361
+msgid "Remote Fatal"
+msgstr ""
+
+#: src/connection.c:364
+msgid "Local Fatal"
+msgstr ""
+
+#: src/connection.c:367
+msgid "Timed Out"
+msgstr ""
+
+#: src/connection.c:369
+msgid "Max attempts reached"
+msgstr ""
+
+#: src/connection.c:372
+msgid "Unkown Status!"
+msgstr ""
+
+#: src/connection.c:463 src/misc.c:471
+msgid "Error: unsupported protocol"
+msgstr ""
+
+#: src/connection.c:487
+#, c-format
+msgid "The server returned location is wrong: %s!"
+msgstr ""
+
+#: src/connection.c:496
+#, c-format
+msgid "Redirected to => %s"
+msgstr ""
+
+#: src/debug.c:60 src/download.c:798 src/download.c:1075
+#, c-format
+msgid "unable to delete the file %s. Reason-: %s"
+msgstr ""
+
+#: src/download.c:135 src/download.c:153 src/download.c:2093
+#: src/download.c:2111
+#, c-format
+msgid "Unable to open file %s: %s!"
+msgstr ""
+
+#: src/download.c:287
+msgid "Warning! Unable to create logfile!"
+msgstr ""
+
+#: src/download.c:306 src/download.c:317 src/download.c:457 src/download.c:479
+#: src/download.c:511 src/download.c:554 src/download.c:575 src/download.c:600
+#: src/download.c:642 src/download.c:663 src/download.c:1387
+#: src/download.c:1432 src/download.c:1515 src/download.c:1562
+#: src/download.c:1639 src/download.c:1678 src/download.c:1724
+#: src/download.c:1776 src/download.c:1801 src/download.c:1826
+#: src/download.c:1872 src/download.c:1923 src/download.c:1948
+msgid "Error: Not enough system resources"
+msgstr ""
+
+#: src/download.c:321
+msgid "Error: Unsupported Protocol was specified"
+msgstr ""
+
+#: src/download.c:325
+msgid "All threads created"
+msgstr ""
+
+#: src/download.c:445 src/download.c:1321
+msgid "The file was not found in all the connections!"
+msgstr ""
+
+#: src/download.c:451 src/download.c:473 src/download.c:550 src/download.c:571
+#: src/download.c:638 src/download.c:659 src/download.c:1772
+#: src/download.c:1797 src/download.c:1919 src/download.c:1944
+msgid "Relaunching download"
+msgstr ""
+
+#: src/download.c:467 src/download.c:1448
+msgid "Failed to change to the working directory on all the connections!"
+msgstr ""
+
+#: src/download.c:489 src/download.c:1656
+#, c-format
+msgid "Connection %d, had a local fatal error: %s .Aborting download. "
+msgstr ""
+
+#: src/download.c:504 src/download.c:1671
+msgid "All logins rejected! Retrying connection"
+msgstr ""
+
+#: src/download.c:593 src/download.c:1819
+msgid "All connections attempts have been  rejected! Retrying connection"
+msgstr ""
+
+#: src/download.c:1359 src/download.c:1487
+msgid "Trying additional paths available on this server"
+msgstr ""
+
+#: src/download.c:1414 src/download.c:1543
+msgid ""
+"No additional paths on this server available, so will switch to another "
+"server"
+msgstr ""
+
+#: src/download.c:1578
+msgid "The server(s) do not support  REST on all the connections!"
+msgstr ""
+
+#: src/download.c:1621
+msgid ""
+"This server does not support resuming downloads, so will switch to another "
+"server"
+msgstr ""
+
+#: src/download.c:1706
+msgid ""
+"This server has rejected the login attempt, so will switch to another server"
+msgstr ""
+
+#: src/download.c:1854
+msgid ""
+"This server has rejected the connection attempt, so will switch to another "
+"server"
+msgstr ""
+
+#: src/ftp.c:106
+#, c-format
+msgid "Message = %s"
+msgstr ""
+
+#: src/ftp.c:126
+#, c-format
+msgid "Error checking for FTP data: %s"
+msgstr ""
+
+#: src/ftp.c:143
+#, c-format
+msgid "Error receiving FTP data: %s"
+msgstr ""
+
+#: src/ftp.c:167
+#, c-format
+msgid "Sending:  %s"
+msgstr ""
+
+#: src/ftp.c:172
+#, c-format
+msgid "Error sending FTP data: %s"
+msgstr ""
+
+#: src/ftp.c:213
+#, c-format
+msgid "Received: %s"
+msgstr ""
+
+#: src/ftp.c:344
+#, c-format
+msgid "FTP PASV Header = %s"
+msgstr ""
+
+#. Unknown error code.
+#: src/ftp.c:759
+#, c-format
+msgid "Unknown code %d retuned during FTP login"
+msgstr ""
+
+#: src/ftp.c:811 src/ftp.c:831 src/http.c:562 src/http.c:577
+#: src/http-retr.c:69 src/http-retr.c:84
+#, c-format
+msgid "Connecting to %s"
+msgstr ""
+
+#: src/ftp.c:822 src/ftp.c:840
+#, c-format
+msgid "Error while connecting to %s"
+msgstr ""
+
+#: src/ftp.c:827 src/ftp.c:844
+#, c-format
+msgid "Connected to %s"
+msgstr ""
+
+#: src/ftp.c:872 src/ftp.c:881
+#, c-format
+msgid "Logging in as user %s with password %s"
+msgstr ""
+
+#: src/ftp.c:895
+msgid "Logged in successfully"
+msgstr ""
+
+#: src/ftp.c:915
+#, c-format
+msgid "CWD failed to change to directory '%s'"
+msgstr ""
+
+#: src/ftp.c:924
+msgid "CWD not needed"
+msgstr ""
+
+#: src/ftp.c:931
+msgid "REST failed"
+msgstr ""
+
+#: src/ftp.c:936
+msgid "REST ok"
+msgstr ""
+
+#: src/ftp.c:1016
+#, c-format
+msgid "Error receiving FTP transfer data: %s"
+msgstr ""
+
+#: src/ftp.c:1021
+#, c-format
+msgid "String received after the LIST command = %s"
+msgstr ""
+
+#: src/ftp.c:1039
+msgid ""
+"Unable to parse the line the FTP server returned:please report URL to "
+"kalum@delrom.ro "
+msgstr ""
+
+#: src/ftp.c:1066
+msgid "Server doesn't seem to support PASV"
+msgstr ""
+
+#: src/ftp.c:1142
+#, c-format
+msgid "Retrying attempt %d in %d seconds"
+msgstr ""
+
+#: src/ftp.c:1161 src/http.c:734
+msgid "Successfully got info"
+msgstr ""
+
+#: src/ftp.c:1169 src/http.c:746
+msgid "File not found!"
+msgstr ""
+
+#: src/ftp.c:1188 src/ftp-retr.c:319 src/http.c:765 src/http-retr.c:331
+#, c-format
+msgid "I have tried %d attempt(s) and have failed, aborting"
+msgstr ""
+
+#: src/ftp-retr.c:125
+#, c-format
+msgid "Logging in as user %s with password %s."
+msgstr ""
+
+#: src/ftp-retr.c:165
+#, c-format
+msgid "CWD failed to change to directory '%s'."
+msgstr ""
+
+#: src/ftp-retr.c:171
+msgid "CWD ok."
+msgstr ""
+
+#: src/ftp-retr.c:175
+msgid "CWD not needed."
+msgstr ""
+
+#: src/ftp-retr.c:196
+msgid ""
+"I have a bug in my  code!!, check remote_starpos and resume_support values"
+msgstr ""
+
+#: src/ftp-retr.c:206
+msgid "RETR failed"
+msgstr ""
+
+#: src/ftp-retr.c:259
+#, c-format
+msgid "Retrying..Attempt %d in %d seconds"
+msgstr ""
+
+#: src/ftp-retr.c:271 src/http-retr.c:284
+msgid "Error while attemting to process download file "
+msgstr ""
+
+#: src/ftp-retr.c:302 src/http-retr.c:311
+msgid "Successfully got download"
+msgstr ""
+
+#: src/ftp-retr.c:308
+msgid "Error occured in connection..."
+msgstr ""
+
+#: src/getopt.c:741
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr ""
+
+#: src/getopt.c:769
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr ""
+
+#: src/getopt.c:776
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr ""
+
+#: src/getopt.c:792 src/getopt.c:995
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr ""
+
+#.
+#. * --option
+#.
+#: src/getopt.c:825
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr ""
+
+#.
+#. * +option or -option
+#.
+#: src/getopt.c:831
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr ""
+
+#.
+#. * 1003.2 specifies the format of this message.
+#.
+#: src/getopt.c:863
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr ""
+
+#: src/getopt.c:865
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr ""
+
+#: src/getopt.c:902 src/getopt.c:1051
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr ""
+
+#: src/getopt.c:961
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr ""
+
+#: src/getopt.c:981
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr ""
+
+#: src/getopt.c:1118
+msgid "digits occur in two different argv-elements.\n"
+msgstr ""
+
+#: src/getopt.c:1124
+msgid "option a\n"
+msgstr ""
+
+#: src/getopt.c:1128
+msgid "option b\n"
+msgstr ""
+
+#: src/getopt.c:1132
+#, c-format
+msgid "option c with value `%s'\n"
+msgstr ""
+
+#: src/getopt.c:1139
+#, c-format
+msgid "?? getopt returned character code 0%o ??\n"
+msgstr ""
+
+#: src/getopt.c:1145
+msgid "non-option ARGV-elements: "
+msgstr ""
+
+#: src/http.c:376
+msgid "Failed writing HTTP request"
+msgstr ""
+
+#: src/http.c:397
+#, c-format
+msgid "Header = %s"
+msgstr ""
+
+#: src/http.c:401
+msgid "End of file while parsing headers"
+msgstr ""
+
+#: src/http.c:412
+msgid "Read error in headers"
+msgstr ""
+
+#. Store the descriptive response.
+#. Malformed request.
+#: src/http.c:438
+msgid "UNKNOWN"
+msgstr ""
+
+#: src/http.c:440
+msgid "(no description)"
+msgstr ""
+
+#: src/http.c:571 src/http.c:583 src/http.c:801 src/http-retr.c:77
+#: src/http-retr.c:91 src/http-retr.c:394
+#, c-format
+msgid "Error connecting to %s"
+msgstr ""
+
+#: src/http.c:611 src/http.c:828 src/http-retr.c:119 src/http-retr.c:421
+#, c-format
+msgid "Authenticating as user %s password %s"
+msgstr ""
+
+#: src/http.c:612 src/http.c:829 src/http-retr.c:120 src/http-retr.c:422
+#, c-format
+msgid "Authentification string=%s"
+msgstr ""
+
+#: src/http.c:682 src/http-retr.c:198 src/http-retr.c:477
+msgid "Sending HTTP request"
+msgstr ""
+
+#: src/http.c:717 src/http-retr.c:272
+#, c-format
+msgid "Retrying...Attempt %d in %d seconds"
+msgstr ""
+
+#: src/http-retr.c:304
+msgid "Will be handled in main "
+msgstr ""
+
+#: src/logfile.c:49
+#, c-format
+msgid "Error opening file %s for writing: %s"
+msgstr ""
+
+#: src/logfile.c:65 src/logfile.c:75 src/logfile.c:97 src/logfile.c:113
+#: src/logfile.c:129 src/logfile.c:146
+#, c-format
+msgid "Error writing to file %s: %s"
+msgstr ""
+
+#: src/logfile.c:199
+msgid "logfile doesn't exist"
+msgstr ""
+
+#: src/logfile.c:232
+#, c-format
+msgid "Error opening file %s for reading: %s"
+msgstr ""
+
+#: src/logfile.c:270 src/logfile.c:285 src/logfile.c:301 src/logfile.c:316
+#, c-format
+msgid "Error reading from file %s: %s"
+msgstr ""
+
+#: src/misc.c:48
+#, c-format
+msgid "Failed to malloc() %lu bytes."
+msgstr ""
+
+#: src/misc.c:63
+#, c-format
+msgid "Failed to realloc() %lu bytes."
+msgstr ""
+
+#: src/misc.c:85
+msgid "Not enough memory to continue: strdup() failed."
+msgstr ""
+
+#: src/misc.c:304
+msgid "Warning: Unable to delay"
+msgstr ""
+
+#: src/misc.c:326
+msgid "Unable to lookup hostname"
+msgstr ""
+
+#: src/misc.c:328
+msgid "Unable to create socket"
+msgstr ""
+
+#: src/misc.c:330
+msgid "Error occured while connecting"
+msgstr ""
+
+#: src/misc.c:332 src/misc.c:386
+msgid "The connection attempt was refused"
+msgstr ""
+
+#: src/misc.c:334
+msgid "Error while accepting the connection"
+msgstr ""
+
+#: src/misc.c:336
+msgid "Error while Binding socket"
+msgstr ""
+
+#: src/misc.c:338
+msgid "Error while listening"
+msgstr ""
+
+#: src/misc.c:340
+msgid "The connection was reset/closed by the peer"
+msgstr ""
+
+#: src/misc.c:342
+msgid "The URL Protocol was unknown"
+msgstr ""
+
+#: src/misc.c:344
+msgid "The port specified in the URL is not valid!"
+msgstr ""
+
+#: src/misc.c:346
+msgid "The Hostname specified in the URL is not valid!"
+msgstr ""
+
+#: src/misc.c:348
+msgid "The Pattern specified in the URL does not look valid!"
+msgstr ""
+
+#: src/misc.c:350
+msgid "End of file reached in HTTP connection"
+msgstr ""
+
+#: src/misc.c:352
+msgid "Error occured in HTTP data transfer"
+msgstr ""
+
+#: src/misc.c:354
+msgid "Authentification is required to access this resource"
+msgstr ""
+
+#: src/misc.c:356
+msgid "Failed to Authenticate with host!"
+msgstr ""
+
+#: src/misc.c:358
+msgid "The URL was not found on the host!"
+msgstr ""
+
+#: src/misc.c:360
+msgid "The host disallowed the login attempt"
+msgstr ""
+
+#: src/misc.c:362
+msgid "The PORT request was rejected by the server"
+msgstr ""
+
+#: src/misc.c:364
+msgid "The object file/dir was not found on the host!"
+msgstr ""
+
+#: src/misc.c:366
+msgid "The TYPE specified in not known by the FTP server!"
+msgstr ""
+
+#: src/misc.c:368
+msgid "The command is not known by the FTP server!"
+msgstr ""
+
+#: src/misc.c:370
+msgid "The SIZE command failed"
+msgstr ""
+
+#: src/misc.c:372
+msgid "Error occured in FTP data transfer"
+msgstr ""
+
+#: src/misc.c:374
+msgid "The REST command failed"
+msgstr ""
+
+#: src/misc.c:376
+msgid "The peer did not allow access"
+msgstr ""
+
+#: src/misc.c:378 src/misc.c:380
+msgid "The host rejected the password"
+msgstr ""
+
+#: src/misc.c:382
+msgid "The PASV (passive mode) was not supported the host"
+msgstr ""
+
+#: src/misc.c:384
+msgid "The host does not support PASV (passive mode) transfers"
+msgstr ""
+
+#: src/misc.c:388
+msgid "Failed to (CWD)change to the directory"
+msgstr ""
+
+#: src/misc.c:392
+msgid ""
+"The host said the requested service was unavailable and closed the control "
+"connection"
+msgstr ""
+
+#: src/misc.c:394
+msgid "getsockname failed!"
+msgstr ""
+
+#: src/misc.c:399 src/misc.c:409
+msgid ""
+"The server, while acting as a gateway or proxy, received an invalid response "
+"from the upstream server it accessed in attempting to fulfill the request"
+msgstr ""
+
+#: src/misc.c:404
+msgid ""
+"The server is currently unable to handle the request due to a temporary "
+"overloading or maintenance of the server."
+msgstr ""
+
+#: src/misc.c:414
+msgid ""
+"The server encountered an unexpected condition which prevented it from "
+"fulfilling the request."
+msgstr ""
+
+#: src/misc.c:419
+msgid ""
+"The server does not support the functionality required to fulfill the "
+"request."
+msgstr ""
+
+#: src/misc.c:422
+msgid "Error while opening file"
+msgstr ""
+
+#: src/misc.c:424
+msgid "Error while writing to file"
+msgstr ""
+
+#: src/misc.c:427
+msgid "The Download was aborted"
+msgstr ""
+
+#: src/misc.c:429
+msgid "The Download encountered a local fatal error"
+msgstr ""
+
+#: src/misc.c:431
+msgid "Error: Resuming this connection is not possible"
+msgstr ""
+
+#: src/misc.c:433
+msgid "Error while reading data from socket"
+msgstr ""
+
+#: src/misc.c:435
+msgid "Error while writing data to socket"
+msgstr ""
+
+#: src/misc.c:437
+msgid "Error while Proxying"
+msgstr ""
+
+#: src/misc.c:439
+msgid "The location is a directory"
+msgstr ""
+
+#: src/misc.c:442
+msgid "Unknown/Unsupported error code"
+msgstr ""
+
+#: src/netrc.c:215
+#, c-format
+msgid "%s:%d: warning: found \"%s\" before any host names\n"
+msgstr ""
+
+#: src/netrc.c:243
+#, c-format
+msgid "%s:%d: warning: unknown token \"%s\"\n"
+msgstr ""

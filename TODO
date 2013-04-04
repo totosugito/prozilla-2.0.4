@@ -1,0 +1,46 @@
+Interface:
+1.Check if the target file exists and prompt user for action, ie to delete 
+or abort.
+2. add a switch called -u for the username and prompt for a password
+
+2005-08-03    <kalum@genesys.ro>
+
+	* src/interface.c (DisplayCursesInfo): ./proz http://ck.kolivas.org/patches/2.6/2.6.12/2.6.12-ck4/patch-2.6.12-ck4.bz2 does not seem to display properly in the time filed, its a fault of the curses display code.
+
+Preferences:
+	*Preferences to be saved
+	:DONE
+
+	*Number of Threads maximun reduced to 15 or so, 30 is way to many
+	*Someone might need them , I thought 30 was to little ;)
+
+	*Preferences to oppen with General, and not Proxies
+	 :DONE
+	
+
+Main:
+	*Add About screen
+	:DONE	
+	*Made downloading screens dockable in Main window?
+	*Change taskbar name to ProzGUI or domething, not download.
+	:DONE Prozilla - Download Accelerator
+	*Why ALT-n and ALT-o? CTRL is used standardly for this IMHO.
+	 :DONE	
+	*Options should be called "Preferences".
+	:DONE
+	*Shortcut to this should be thern CTRL-p or something.
+	:DONE
+
+
+Add URL:
+	*Maybe a cooler Logo?
+	*Choice of how many threads that 1 download should have.
+	*Choice of whether to ftpsearch or not.
+	:DONE
+
+
+Download screen:
+	*Buttons should be changed to Cancel and Resume or something.
+	*When one shuts screen down, and asked for resuming or cancelling,
+	buttons should be changed from "Yes" and "No"
+

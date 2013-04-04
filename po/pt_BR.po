@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Gustavo Noronha Silva <kov@debian.org>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: prozgui\n"
+"POT-Creation-Date: 2001-09-27 12:56+0600\n"
+"PO-Revision-Date: 2001-10-02\n"
+"Last-Translator: Gustavo Noronha Silva <kov@debian.org>\n"
+"Language-Team: Debian-BR <debian-l10n-portuguese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/we.cxx:84
+msgid "Prozilla Preferences Panel"
+msgstr "Painel de Preferências do Prozilla"
+
+#: src/we.cxx:89
+msgid "General"
+msgstr "Geral"
+
+#: src/we.cxx:108
+msgid "Number of Threads:"
+msgstr "Número de Threads:"
+
+#: src/we.cxx:117
+msgid "Use PASV for FTP transfers (recommended)"
+msgstr "Usar PASV para transferências FTP (recomendado)"
+
+#: src/we.cxx:122
+msgid ""
+"Ask the HTTP proxies not to cache requests between sessions (default is off)"
+msgstr "Pedir aos proxies HTTP para não fazerem cache das requisições entre sessões (o padrão é desligado)"
+
+#: src/we.cxx:138
+msgid "Retry Delay (Sec):"
+msgstr "Intervalo de Tentativas (Seg):"
+
+#: src/we.cxx:142
+msgid "Timeout Period (Sec):"
+msgstr "Tempo Limite de Operação (Seg):"
+
+#: src/we.cxx:146
+msgid "Directory to download the files:"
+msgstr "Diretório para onde os arquivos devem ir:"
+
+#: src/we.cxx:150
+msgid "Limit bandwith usage PER download to (Kbps) (0 = unlimited):"
+msgstr "Limitar largura de banda por download para (Kbps) (0 = ilimitado):"
+
+#: src/we.cxx:158
+msgid "Proxies"
+msgstr "Proxies"
+
+#: src/we.cxx:166 src/we.cxx:193
+msgid "Hostname:"
+msgstr "Hostname:"
+
+#: src/we.cxx:171 src/we.cxx:198
+msgid "Port:"
+msgstr "Porta:"
+
+#: src/we.cxx:177
+msgid "HTTP Proxy:"
+msgstr "Proxy HTTP:"
+
+#: src/we.cxx:182 src/we.cxx:204
+msgid "Username:"
+msgstr "Nome do usuário:"
+
+#: src/we.cxx:187 src/we.cxx:209
+msgid "Password:"
+msgstr "Senha:"
+
+#: src/we.cxx:215
+msgid "FTP Proxy:"
+msgstr "Proxy FTP:"
+
+#: src/we.cxx:220
+msgid "FTP Proxy Type:"
+msgstr "Tipo de Proxy FTP:"
+
+#: src/we.cxx:227
+msgid "Use HTTP Proxy"
+msgstr "Usar Proxy HTTP"
+
+#: src/we.cxx:232
+msgid "Use FTP Proxy"
+msgstr "Usar Proxy FTP"
+
+#: src/we.cxx:240
+msgid "Direct Connection to the Internet"
+msgstr "Conexão Direta à Internet"
+
+#: src/we.cxx:247
+msgid "Use proxies"
+msgstr "Usar Proxy"
+
+#: src/we.cxx:260
+msgid "FTP Search"
+msgstr "FTP Search"
+
+#: src/we.cxx:266
+msgid "Number of mirrors to request:"
+msgstr ""
+
+#: src/we.cxx:279
+msgid "Ping Timeout (Sec):"
+msgstr "Tempo Limite de Operação (Seg):"
+
+#: src/we.cxx:288
+msgid "Number of mirrors to ping at once:"
+msgstr ""
+
+#: src/we.cxx:301
+msgid "Do FTPSearch automatically"
+msgstr ""
+
+#: src/we.cxx:312 src/we.cxx:4233 src/we.cxx:4626
+msgid "OK"
+msgstr "OK"
+
+#: src/dl_win.cxx:102 src/we.cxx:316 src/we.cxx:4642
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/we.cxx:4221
+msgid "Prozilla Download Accelerator 2.0.4beta"
+msgstr "Acelerador de Downloads Prozilla 2.0.4beta"
+
+#: src/we.cxx:4227
+msgid "GUI Version 2.0.4beta"
+msgstr "Versão da GUI: 2.0.4beta"
+
+#: src/we.cxx:4230
+msgid "libprozilla version 1.0.0"
+msgstr "Versão da libprozilla: 1.0.1"
+
+#: src/we.cxx:4245
+msgid "Credits"
+msgstr "Créditos"
+
+#: src/we.cxx:4254
+msgid "Kalum Somaratna - Main Programming"
+msgstr "Kalum Somaratna - Programação Principal"
+
+#: src/we.cxx:4258
+msgid "Uwe Hermann - Additional Programming"
+msgstr "Uwe Hermann - Programação Adicional"
+
+#: src/we.cxx:4261
+msgid ""
+"Gustavo Noronha Silva  (KoV) - libprozilla GNU gettext support, deb package "
+"maintainer"
+msgstr ""
+"Gustavo Noronha Silva  (KoV) - suporte a GNU gettext para a libprozilla e "
+"mantenedor Debian"
+
+#: src/we.cxx:4266
+msgid "Ralph Slooten - Web Page Maintainer,  RPM packager, testing"
+msgstr "Ralph Slooten - Mantenedor da página Web, empacotador RPM, testador"
+
+#: src/we.cxx:4270
+msgid ""
+"If you have contributed and arent listed, I apologise and  please mail me "
+"<kalum@genesys.ro> and I will correct it"
+msgstr "Se você contribuiu e não está listado, peço desculpas e por favor envie um email para <kalum@genesys.ro> e eu irei corrigir isso"
+
+#: src/we.cxx:4275
+msgid ""
+"Silviu Marin-Caea - (Our sysadmin) Donation of valuable bandwith and system "
+"resources at genesys.ro, testing"
+msgstr "Silviu Marin-Caea - (Nosso Administrador de Sistema) Doação de sistema e banda valorosos em genesys.ro e testador"
+
+#: src/we.cxx:4280
+msgid "Pablo Iranzo Gómez - testing"
+msgstr "Pablo Iranzo Gómez - testador"
+
+#: src/we.cxx:4284
+msgid "Krogg - The cool Prozilla logo"
+msgstr "Krogg - O logo do Prozilla"
+
+#: src/we.cxx:4288
+msgid "David L. Matthews - testing"
+msgstr "David L. Matthews - testador"
+
+#: src/we.cxx:4296
+msgid "Translations"
+msgstr "Traduções"
+
+#: src/we.cxx:4304
+msgid "Ruben Boer - Dutch Translation"
+msgstr "Ruben Boer - Tradução Holandesa"
+
+#: src/we.cxx:4308
+msgid "Ralph Slooten- Dutch Translation"
+msgstr "Ralph Slooten - Tradução Holandesa"
+
+#: src/we.cxx:4312
+msgid "Flower - Romanian Translation"
+msgstr "Flower - Tradução Romena"
+
+#: src/we.cxx:4316
+msgid "Gustavo Noronha Silva  (KoV) - Portugese Translation"
+msgstr "Gustavo Noronha Silva  (KoV) - Tradução para Português"
+
+#: src/we.cxx:4320
+msgid "Emanuele Tatti (Kreazy) - Itallian Translation"
+msgstr ""
+
+#: src/we.cxx:4330
+msgid "Webpage - http://prozilla.genesys.ro/"
+msgstr "Página - http://prozilla.genesys.ro/"
+
+#: src/we.cxx:4624
+msgid "Please enter the  URL"
+msgstr "Por favor digite a URL"
+
+#: src/we.cxx:4635
+msgid "Enter URL (CTRL+V to paste from clipboard)"
+msgstr "Digite a URL (CTRL+V para colar da área de transferência)"
+
+#: src/we.cxx:4646
+msgid "FTPSearch for mirrors (Experimental)"
+msgstr ""
+
+#: src/dl_win.cxx:14
+msgid "Abort, Resume Later"
+msgstr "Abortar, continuar mais tarde"
+
+#: src/dl_win.cxx:19 src/download_win.cpp:391
+msgid "Pause"
+msgstr "Pausa"
+
+#: src/dl_win.cxx:25
+msgid "Abort, No  Resume Later"
+msgstr "Abortar, não continuar"
+
+#: src/dl_win.cxx:31
+msgid "URL:"
+msgstr "URL:"
+
+#: src/dl_win.cxx:70
+msgid "Estimated Time Left"
+msgstr "Tempo Restante Estimado"
+
+#: src/dl_win.cxx:98
+msgid "Creating file.............."
+msgstr "Criando arquivo.............."
+
+#: src/dl_win.cxx:137 src/dl_win.cxx:170 src/dl_win.cxx:208
+msgid "Attention!"
+msgstr "Atenção!"
+
+#: src/dl_win.cxx:141
+msgid "Ok"
+msgstr "Ok"
+
+#: src/dl_win.cxx:174 src/dl_win.cxx:212
+msgid "Yes"
+msgstr "Sim"
+
+#: src/dl_win.cxx:178 src/dl_win.cxx:216
+msgid "No"
+msgstr "Não"
+
+#: src/download_win.cpp:43
+msgid "Are you Sure You want to quit?"
+msgstr "Tem certeza que quer sair?"
+
+#: src/download_win.cpp:183
+msgid "Creating the thread that gets info about file.."
+msgstr "Criando a thread que obtém informações sobre o arquivo..."
+
+#: src/download_win.cpp:208
+msgid "I am unable to delete the target file!"
+msgstr "Fui incapaz de remover o arquivo alvo!"
+
+#: src/download_win.cpp:241
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections"
+msgstr "Um erro aconteceu durante o processamento do arquivo de log! Assumindo número de conexões padrão"
+
+#: src/download_win.cpp:250
+msgid ""
+"The previous download used a different number of connections than the "
+"default! so I will use the previous number of threads"
+msgstr "O download anterior usou um número de conexões diferente do padrão! Então eu usarei o número anterior de threads."
+
+#: src/download_win.cpp:270
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections to delete"
+msgstr "Um erro aconteceu durante o processamento do arquivo de log! Assumindo número de conexões padrão para remover."
+
+#: src/download_win.cpp:293
+#, c-format
+msgid "The target file %s exists, would you like to overwrite it?"
+msgstr "O arquivo alvo %s existe, gostaria de sobrescrevê-lo?"
+
+#: src/download_win.cpp:321
+#, c-format
+msgid ""
+"Previous download of %s exists, would you like to resume it or overwrite it?"
+msgstr "Download anterior de %s existe, quer continuar ou sobrescrever?"
+
+#: src/download_win.cpp:325
+msgid "Resume"
+msgstr "Continuar"
+
+#: src/download_win.cpp:326
+msgid "Overwrite"
+msgstr "Sobrescrever"
+
+#: src/download_win.cpp:371
+msgid "RESUME supported"
+msgstr "CONTINUAÇÃO suportada"
+
+#: src/download_win.cpp:379
+msgid "RESUME NOT supported"
+msgstr "CONTINUAÇÃO não suportada"
+
+#: src/download_win.cpp:444
+msgid "UnPause"
+msgstr "Despausa"
+
+#: src/download_win.cpp:477
+msgid "waiting for thread to end"
+msgstr "esperando que a thread acabe"
+
+#: src/download_win.cpp:479
+msgid "Thread ended"
+msgstr "Thread acabou"
+
+#: src/download_win.cpp:487
+msgid "Got info succesfully"
+msgstr "Informações conseguidas com êxito"
+
+#: src/download_win.cpp:490
+#, c-format
+msgid "File Size = %ld Kb"
+msgstr "Tamanho do arquivo = %ld Kb"
+
+#: src/download_win.cpp:494
+msgid "File Size is UNKOWN"
+msgstr "Tamanho do arquivo DESCONHECIDO"
+
+#: src/download_win.cpp:515
+#, c-format
+msgid "The URL %s doesnt exist!"
+msgstr "A URL %s não existe!"
+
+#: src/download_win.cpp:546
+msgid "No suitable mirrors were found, downloading from original server"
+msgstr ""
+
+#: src/download_win.cpp:596
+#, c-format
+msgid "Total Bytes received %ld Kb"
+msgstr "Total de Bytes recebidos %ld Kb"
+
+#: src/download_win.cpp:601
+#, c-format
+msgid "Average Speed = %.3f Kb/sec"
+msgstr "Velocidade Média = %.3f Kb/sec"
+
+#: src/download_win.cpp:610
+#, c-format
+msgid "%d Seconds"
+msgstr "%d Segundos"
+
+#: src/download_win.cpp:612
+#, c-format
+msgid "%d Minutes %d Seconds"
+msgstr "%d Minutos %d Segundos"
+
+#: src/download_win.cpp:615
+#, c-format
+msgid "%d Hours %d minutes"
+msgstr "%d Horas %d Minutos"
+
+#. Wait till all are completed
+#: src/download_win.cpp:637
+msgid "Waiting till all threads terminate"
+msgstr "Esperando até que todas as threads completem"
+
+#: src/download_win.cpp:642
+msgid "Got DL succesfully, now building file"
+msgstr "Download terminado com sucesso, agora reconstruindo arquivo"
+
+#: src/download_win.cpp:649
+#, c-format
+msgid "Building file %s ....."
+msgstr "Construindo arquivo %s ....."
+
+#: src/download_win.cpp:673
+msgid ""
+"Error the server/proxy lied about resuming so I have to restart this from "
+"the begiining!"
+msgstr "Erro: o servidor/proxy mentei sobre continuação e eu terei de começar tudo do começo!"
+
+#: src/download_win.cpp:693
+#, c-format
+msgid ""
+"One connection of the download %s encountered a unrecoverable local error, "
+"usually lack of free space, or a write to bad medium, or a problem with "
+"permissions,so pelase fix this and retry"
+msgstr "Uma conexão do download %s encontrou um erro local irrecuperáel. Norlmalmente isso quer dizer falta de espaço ou uma mídia ruim ou um problema de permissões, então por favor conserte o erro e tente novamente."
+
+#: src/download_win.cpp:710
+#, c-format
+msgid ""
+"A connection(s) of the download %s encountered a unrecoverable remote error, "
+"usually the file not being present in the remote server, therefore the "
+"download had to be aborted!"
+msgstr "Uma conexão do download %s encontrou um erro local irrecuperáel, normalmente isso quer dizer que o arquivo não está presente no servidor remoto, portanto o download teve de ser abortado!"
+
+#: src/download_win.cpp:761 src/download_win.cpp:788
+msgid "Close"
+msgstr "Fechar"
+
+#: src/main.cpp:225 src/main.cpp:351
+#, c-format
+msgid "%s does not seem to be a valid URL"
+msgstr "%s não parece uma URL válida"
+
+#: src/main.cpp:232
+#, c-format
+msgid "%s contains just a hostname, it does not contain a file to download!"
+msgstr "%s contém apenas o nome do host mas não um nome de arquivo para baixar!"
+
+#: src/main.cpp:286
+msgid "Error: Invalid  option\n"
+msgstr "Erro: opção inválida\n"
+
+#: src/main.cpp:291
+msgid "Prozilla - Download Accelerator"
+msgstr "Prozilla - Acelerador de Download"
+
+#: src/main.cpp:314
+msgid "&File"
+msgstr "&Arquivo"
+
+#: src/main.cpp:315
+msgid "&New URL"
+msgstr "&Nova URL"
+
+#: src/main.cpp:317
+msgid "&Preferences"
+msgstr "&Preferências"
+
+#: src/main.cpp:319
+msgid "&Quit"
+msgstr "&Sair"
+
+#: src/main.cpp:321
+msgid "&Help"
+msgstr ""
+
+#: src/main.cpp:322
+msgid "&About"
+msgstr "&Sobre"
+
+#: src/options.cpp:130
+#, c-format
+msgid "%s does not seem to be a valid directory"
+msgstr "%s não parece ser um diretório válido"
+
+#: src/options.cpp:153
+#, c-format
+msgid "%s does not seem to be a valid HTTP proxy value"
+msgstr "%s não parece ser um valor de proxy HTTP válido"
+
+#: src/options.cpp:181
+#, c-format
+msgid "%s does not seem to be a valid FTP proxy value"
+msgstr "%s não parece ser um valor de proxy FTP válido"
+
+#~ msgid "USER@SITE"
+#~ msgstr "USUÁRIO@SERVIDOR"
+
+#~ msgid "USER@ProxyUser@SITE"
+#~ msgstr "USUÁRIO@USUÁRIONOPROXY@SERVIDOR"
+
+#~ msgid "USER@SITE_PROXYUSER"
+#~ msgstr "USUÁRIO@SERVIDOR_USUÁRIONOPROXY"
+
+#~ msgid "ProxyUser@SITE"
+#~ msgstr "USUÁRIONOPROXY@SERVIDOR"
+
+#~ msgid "LOGIN_then_USER@SITE"
+#~ msgstr "LOGIN_então_USUÁRIO@SERVIDOR"
+
+#~ msgid "OPENSITE"
+#~ msgstr "SITEABERTO"
+
+#~ msgid "SITESITE"
+#~ msgstr "SERVIDORSERVIDOR"
+
+#~ msgid "HTTP"
+#~ msgstr "HTTP"

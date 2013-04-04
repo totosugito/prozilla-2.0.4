@@ -1,0 +1,105 @@
+------------------------------------------------------------------------
+ChangeLog
+------------------------------------------------------------------------
+2005-12-01    <kalum@genesys.ro>
+
+	* src/download_win.cpp (askUserOverwrite): Dialog added to enable
+	prompting for user input if the target download file already
+	exists on the local machine.
+
+2005-11-15    <kalum@genesys.ro>
+
+	* src/interface.c (DisplayCursesInfo): Ale's patch applied which
+	fixed a FreeBSD 4.x compilation failure because a variable is
+	declared in the middle of a function (it uses GCC 2.95 by default).
+
+2005-10-28    <kalum@genesys.ro>
+
+	* configure.in: added a check for libintl for FreeBSD
+
+2005-10-25    <kalum@genesys.ro>
+
+	* src/Makefile.am: includedir = $(prefix)/include was added. 
+
+2005-09-19    <kalum@genesys.ro>
+
+	* src/interface.c (DisplayCursesInfo): Fixed a cosmetic ncurses
+	bug which caused artifacts when the time left was displayed.
+
+2005-09-04    <kalum@genesys.ro>
+
+	* Merged Patches by Richard Dawe which fixed compiler warnings,
+	also added his spec file for building rpms.
+	* Added Ralph's man page.
+
+2005-08-21    <kalum@genesys.ro>
+	* src/main.cpp (help): Added new commandline option --ftpsid=n,
+	which enables the user to select which ftpsearch server to use,
+	0. filesearching.com
+	1. ftpsearch.elmundo.es
+
+2005-08-20    <kalum@genesys.ro>
+
+	* src/download_win.cpp (handle_info_thread): ftpsearch.elmundo.es
+	added as a ftpsearch site.
+
+2005-08-16    <kalum@genesys.ro>
+
+	* src/main.cpp: Supports the ability to set the maximum number of
+	retries now.
+
+2005-08-06    <kalum@genesys.ro>
+
+	* src/download_win.cpp (handle_download_thread): The print_status
+	function decides if to call the curses or the console display
+	routines during the download. 
+
+2005-07-10    <kalum@genesys.ro>
+
+	* src/init.cpp (set_defaults): setting libdebug mode to true.
+
+2005-07-05    <kalum@genesys.ro>
+
+	* src/download_win.cpp (askUserResume): removed the message variable.
+	* Added Ralph's patch which changed wrong email addreses in the
+	CREDITS file and added 2 spec files for the rpm build system.
+
+2005-07-04    <kalum@genesys.ro>
+
+	* src/init.cpp (set_defaults): Added initialisation of
+	min_search_size, the size a file has to be larger than to permit a
+	ftpsearch, initialised to 128k.
+
+2005-07-03    <kalum@genesys.ro>
+
+	* src/ftpsearch_win.cpp (callback): Disaplys a message regarding
+	the number of mirrors retrieved, before pinging them
+	
+2005-06-27    <kalum@genesys.ro>
+
+	* src/interface.c (DisplayCursesInfo): Commented out the erase
+	funtion, this removes the screen flicker associated with the
+	ncurses display.
+
+2005-06-27    <kalum@genesys.ro>
+
+	* src/download_win.cpp (do_download): Made it read the logfile
+	when resuming so as to resume with the same number of connections
+	used in the previous download, if the user had used a number of
+	connections other than the default.
+
+2005-06-26    <kalum@genesys.ro>
+
+	* src/interface.c (DisplayInfo): Changed the default color of the
+	strings to the null pair.
+
+2005-8-22  Grendel <kalum@genesys.ro>
+
+	* Cleaned up some commented out funtions from interface.c 
+	
+2005-04-02  Sean E. Covel <seanecovel@comcast.net>
+
+	* prozilla command-line, based on ProzGui, using libprozilla
+	* Large File support
+
+

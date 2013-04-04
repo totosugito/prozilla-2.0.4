@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-08-15 15:29+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/we.cxx:49
+msgid "USER@SITE"
+msgstr "GEBRUIKER@SITE"
+
+#: src/we.cxx:50
+msgid "USER@ProxyUser@SITE"
+msgstr "GEBRUIKER@ProxyUser@SITE"
+
+#: src/we.cxx:51
+msgid "USER@SITE_PROXYUSER"
+msgstr "GEBRUIKER@SITE_PROXYUSER"
+
+#: src/we.cxx:52
+msgid "ProxyUser@SITE"
+msgstr "ProxyUser@SITE"
+
+#: src/we.cxx:53
+msgid "LOGIN_then_USER@SITE"
+msgstr "LOGIN_dan_GEBRUIKER@SITE"
+
+#: src/we.cxx:54
+msgid "OPENSITE"
+msgstr "OPENSITE"
+
+#: src/we.cxx:55
+msgid "SITESITE"
+msgstr "SITESITE"
+
+#: src/we.cxx:56
+msgid "HTTP"
+msgstr "HTTP"
+
+#: src/we.cxx:74
+msgid "Prozilla Preferences Panel"
+msgstr "Prozilla Instellingen"
+
+#: src/we.cxx:79
+msgid "General"
+msgstr "Algemeen"
+
+#: src/we.cxx:84
+msgid "Retry Delay (Sec):"
+msgstr ""
+
+#: src/we.cxx:98
+msgid "Number of Threads:"
+msgstr ""
+
+#: src/we.cxx:101
+msgid "Timeout Period (Sec):"
+msgstr ""
+
+#: src/we.cxx:106
+msgid "Use PASV for FTP transfers (recommended)"
+msgstr "Gebruik PASV voor FTP vervoer"
+
+#: src/we.cxx:110
+msgid ""
+"Ask the HTTP proxies not to cache requests between sessions (default is off)"
+msgstr ""
+
+#: src/we.cxx:115
+msgid "Directory to download the files:"
+msgstr "Download Map"
+
+#: src/we.cxx:119
+msgid "Limit bandwith usage PER download to (Kbps) (0 = unlimited):"
+msgstr ""
+
+#: src/we.cxx:128
+msgid "Proxies"
+msgstr "Proxies"
+
+#: src/we.cxx:136 src/we.cxx:157
+msgid "Hostname:"
+msgstr "Hostname:"
+
+#: src/we.cxx:140 src/we.cxx:161
+msgid "Port:"
+msgstr "Poort:"
+
+#: src/we.cxx:145
+msgid "HTTP Proxy:"
+msgstr "HTTP Proxy:"
+
+#: src/we.cxx:148 src/we.cxx:166
+msgid "Username:"
+msgstr "Gebruikersnaam"
+
+#: src/we.cxx:152 src/we.cxx:170
+msgid "Password:"
+msgstr "Wachtwoord"
+
+#: src/we.cxx:175
+msgid "FTP Proxy:"
+msgstr "FTP Proxy:"
+
+#: src/we.cxx:178
+msgid "FTP Proxy Type:"
+msgstr "FTP Proxy Soort:"
+
+#: src/we.cxx:183
+msgid "Use HTTP Proxy"
+msgstr "Gebruik HTTP Proxy"
+
+#: src/we.cxx:187
+msgid "Use FTP Proxy"
+msgstr "Gebruik FTP Proxy"
+
+#: src/we.cxx:194
+msgid "Direct Connection to the Internet"
+msgstr "Direct Internet Verbinding"
+
+#: src/we.cxx:200
+msgid "Use proxies"
+msgstr "Proxies Gebruiken"
+
+#: src/we.cxx:214 src/we.cxx:4175
+msgid "OK"
+msgstr "OK"
+
+#: src/dl_win.cxx:85 src/we.cxx:218
+msgid "Cancel"
+msgstr "Annuleer"
+
+#: src/we.cxx:4123
+msgid "Prozilla Download Accelerator M1"
+msgstr "Prozilla Download Accelerator"
+
+#: src/we.cxx:4128
+msgid "GUI Version 2.0.4-beta"
+msgstr "GUI Versie 2.0.4-beta"
+
+#: src/we.cxx:4131
+msgid "libprozilla version 1.0.0"
+msgstr "libprozilla versie 1.0.0"
+
+#: src/we.cxx:4134
+msgid "Credits"
+msgstr ""
+
+#: src/we.cxx:4140
+msgid "Kalum Somaratna - Main Programming"
+msgstr "Kalum Somaratna - Hoofd Programeren"
+
+#: src/we.cxx:4143
+msgid "Uwe Hermann - Additional Programming"
+msgstr "Uwe Hermann - Extra Programeren"
+
+#: src/we.cxx:4146
+msgid ""
+"Gustavo Noronha Silva  (KoV) - libprozilla GNU gettext support, translator, "
+"deb package maintainer"
+msgstr ""
+
+#: src/we.cxx:4151
+msgid "Ralph Slooten - Web Page Maintainer,  RPM packager, testing, translator"
+msgstr "Ralph Slooten - Web Site Ontwikkelaar / Onderhoud,  RPM packager, testen, vertaaling"
+
+#: src/we.cxx:4155
+msgid ""
+"If you have contributed and arent listed, I apologise and  please mail me "
+"<kalum@genesys.ro> and I will correct it"
+msgstr ""
+
+#: src/we.cxx:4160
+msgid ""
+"Silviu Marin-Caea - (Our sysadmin) Donation of valuable bandwith and system "
+"resources at genesys.ro, testing"
+msgstr ""
+
+#: src/we.cxx:4165
+msgid "Pablo Iranzo Gómez - testing"
+msgstr "Pablo Iranzo Gómez - testen"
+
+#: src/we.cxx:4169
+msgid "Krogg - The cool Prozilla logo"
+msgstr "Krogg - de gaaf Prozilla logo"
+
+#: src/dl_win.cxx:13
+msgid "URL:"
+msgstr "URL"
+
+#: src/dl_win.cxx:56
+msgid "Estimated Time Left"
+msgstr "Gemmidelde Tijd Nog"
+
+#: src/dl_win.cxx:64
+msgid "Abort, Resume Later"
+msgstr "Anneuleer, Later"
+
+#: src/dl_win.cxx:68
+msgid "Abort, No  Resume Later"
+msgstr "Annuleer, Geen "
+
+#: src/dl_win.cxx:81
+msgid "Creating file.............."
+msgstr "Bestand maken.............."
+
+#: src/dl_win.cxx:120 src/dl_win.cxx:153 src/dl_win.cxx:191
+msgid "Attention!"
+msgstr "Attentie!"
+
+#: src/dl_win.cxx:124
+msgid "Ok"
+msgstr "OK"
+
+#: src/dl_win.cxx:157 src/dl_win.cxx:195
+msgid "Yes"
+msgstr "Ja"
+
+#: src/dl_win.cxx:161 src/dl_win.cxx:199
+msgid "No"
+msgstr "Nee"
+
+#: src/download_win.cpp:42
+msgid "Are you Sure You want to quit?"
+msgstr "Weet U zeker dat U wil stoppen?"
+
+#: src/download_win.cpp:171
+msgid "I am unable to delete the target file!"
+msgstr "Onmogelijk om de bestand te wissen!"
+
+#: src/download_win.cpp:204
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections"
+msgstr ""
+
+#: src/download_win.cpp:213
+msgid ""
+"The previous download used a different number of connections than the "
+"default! so I will use the previous number of threads"
+msgstr ""
+
+#: src/download_win.cpp:233
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections to delete"
+msgstr ""
+
+#: src/download_win.cpp:256
+#, c-format
+msgid "The target file %s exists, would you like to overwrite it?"
+msgstr "De bestand %s bestaat al, wilt U het vervengen?"
+
+#: src/download_win.cpp:284
+#, c-format
+msgid ""
+"Previous download of %s exists, would you like to resume it or overwrite it?"
+msgstr ""
+
+#: src/download_win.cpp:288
+msgid "Resume"
+msgstr ""
+
+#: src/download_win.cpp:289
+msgid "Overwrite"
+msgstr "Overschrijven"
+
+#: src/download_win.cpp:326
+msgid "RESUME supported"
+msgstr ""
+
+#: src/download_win.cpp:334
+msgid "RESUME NOT supported"
+msgstr ""
+
+#: src/download_win.cpp:378
+msgid "waiting for thread to end"
+msgstr ""
+
+#: src/download_win.cpp:380
+msgid "Thread ended"
+msgstr ""
+
+#: src/download_win.cpp:388
+msgid "Got info succesfully"
+msgstr ""
+
+#: src/download_win.cpp:391
+#, c-format
+msgid "File Size = %ld Kb"
+msgstr ""
+
+#: src/download_win.cpp:395
+msgid "File Size is UNKOWN"
+msgstr ""
+
+#: src/download_win.cpp:404
+#, c-format
+msgid "The URL %s doesnt exist!"
+msgstr "De URL %s bestaat niet!"
+
+#: src/download_win.cpp:451
+#, c-format
+msgid "Total Bytes received %ld Kb"
+msgstr "Totaal Bytes ontvangen %ld Kb"
+
+#: src/download_win.cpp:456
+#, c-format
+msgid "Average Speed = %.3f Kb/sec"
+msgstr "Gemiddelde Snelheid = %.3f Kb/sec"
+
+#: src/download_win.cpp:465
+#, c-format
+msgid "%d Seconds"
+msgstr "%d Seconden"
+
+#: src/download_win.cpp:467
+#, c-format
+msgid "%d Minutes %d Seconds"
+msgstr "%d Minuten %d Seconden"
+
+#: src/download_win.cpp:470
+#, c-format
+msgid "%d Hours %d minutes"
+msgstr "%d Uren %d Minuten"
+
+#. Wait till all are completed
+#: src/download_win.cpp:492
+msgid "Waiting till all threads terminate"
+msgstr ""
+
+#: src/download_win.cpp:497
+msgid "Got DL succesfully, now building file"
+msgstr ""
+
+#: src/download_win.cpp:503
+#, c-format
+msgid "Building file %s ....."
+msgstr ""
+
+#: src/download_win.cpp:526
+msgid ""
+"Error the server/proxy lied about resuming so I have to restart this from "
+"the begiining!"
+msgstr ""
+
+#: src/download_win.cpp:546
+#, c-format
+msgid ""
+"One connection of the download %s encountered a unrecoverable local error, "
+"usually lack of free space, or a write to bad medium, or a problem with "
+"permissions,so pelase fix this and retry"
+msgstr ""
+
+#: src/download_win.cpp:593 src/download_win.cpp:619
+msgid "Close"
+msgstr "Sluiten"
+
+#: src/download_win.cpp:685
+msgid "Creating the thread that gets info about file.."
+msgstr ""
+
+#: src/main.cpp:145
+msgid "Enter URL (CTRL+V to paste from clipboard)"
+msgstr "URL toevoegen (CTRL+V van de klapper te plakken)"
+
+#: src/main.cpp:158 src/main.cpp:306
+#, c-format
+msgid "%s does not seem to be a valid URL"
+msgstr "%s is geen URL"
+
+#: src/main.cpp:248
+msgid "Error: Invalid  option\n"
+msgstr "Fout: Ongeldige optie\n"
+
+#: src/main.cpp:253
+msgid "Prozilla - Download Accelerator"
+msgstr "Prozilla - Download Accelerator"
+
+#: src/main.cpp:276
+msgid "&File"
+msgstr "&Bestand"
+
+#: src/main.cpp:277
+msgid "&New URL"
+msgstr "&Nieuwe URL"
+
+#: src/main.cpp:278
+msgid "&Preferences"
+msgstr "&Instellingen"
+
+#: src/main.cpp:279
+msgid "&About"
+msgstr ""
+
+#: src/main.cpp:280
+msgid "&Quit"
+msgstr ""
+
+#: src/options.cpp:119
+#, c-format
+msgid "%s does not seem to be a valid directory"
+msgstr ""
+
+#: src/options.cpp:142
+#, c-format
+msgid "%s does not seem to be a valid HTTP proxy value"
+msgstr ""
+
+#: src/options.cpp:170
+#, c-format
+msgid "%s does not seem to be a valid FTP proxy value"
+msgstr ""

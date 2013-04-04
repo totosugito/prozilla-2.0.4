@@ -1,0 +1,14 @@
+     ../src/connect.c \
+     ../src/connection.c \
+     ../src/debug.c \
+     ../src/download.c \
+     ../src/ftp.c \
+     ../src/ftpparse.c \
+     ../src/ftp-retr.c \
+     ../src/http.c \
+     ../src/http-retr.c \
+     ../src/logfile.c \
+     ../src/main.c \
+     ../src/misc.c \
+     ../src/netrc.c \
+     ../src/url.c

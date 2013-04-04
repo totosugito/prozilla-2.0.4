@@ -1,0 +1,5 @@
+src/download_win.cpp
+src/ftpsearch_win.cpp
+src/init.cpp
+src/main.cpp
+src/prefs.cpp

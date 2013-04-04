@@ -1,0 +1,118 @@
+This is a list of people who contributed to the old branch of prozilla, ie the console one, it is only fair to them that I list them here as the encouragement given to me for the old prozilla project was vital int he developement of libprozilla.
+
+Richard Dawe <richdawe@bigfoot.com>
+------------------------------------------------------------------------ 
+Makefile fixes, several bugfixes, beta testing, correction of spelling,
+and the gproz script for starting Prozilla in gtk mode, and for several
+excellent suggestions for improvement, the prompting for overwriting files
+were all his suggestions, he also submitted the patch which made prozilla
+access the appropriate sysconfdir/prozilla.conf file it was compiled with.
+
+Biscuit <biscut@biscut.screaming.net>
+-------------------------------------
+Beta testing, and suggestions for improvement.
+
+Wget and it's author
+--------------------
+For a well designed utility. I used it's URL
+parsing function and some of it's HTTP code for the download accelerator.
+
+Lourens Veen <jsr@dds.nl>
+-------------------------
+Discovered a important bug due to incompatibilities in the ncurses libraries
+function definitions between versions 4.x and 5.x. Also found a compilation 
+problem due to a missing header file. 
+
+D. J. Bernstein <djb@pobox.com>
+-------------------------------
+I adopted his well designed ftp parsing library (ftpparse.c and ftpparse.h)
+for the FTP LIST commands output. His code made the parsing of LIST commands
+output which has no defined format, much easier.
+
+Flower <floweros@golia.ro>
+--------------------------
+Bug reports, and a lot suggestions for improvement. ProZilla 1.01 contains
+a lot of his suggestions, and has made Prozilla more versatile and stable.
+He also added the support for a configuration file for prozilla and
+cleaned up the part regarding the installation of the manpages.
+
+Silviu Marin-Caea <silviu@delrom.ro>
+------------------------------------
+For his persistence in tracking down bugs, and for his practical
+suggestions, the most important one was to encourage me to add the retry
+feature for each connection and correcting a bug with the percent counter.
+Many of the new changes in ProZilla 1.04b are due to feedback from him.
+The mailing list <prozilla@delrom.ro> was provided by him which has helped
+in the development of prozilla a lot and thanks too for the bug report
+related to the premature termination of the downloads.
+
+Ralph Slooten <ralph.slooten@quicknet.nl>
+-----------------------------------------
+He corrected some of my faulty English in the connection display, it now
+more appropriately displays "Completed" instead of "All done" and the
+errors README, and also for the suggestions for future improvement and
+testing of ProZilla, together with contributing RPM's of prozilla.
+
+Tse Chi Ming <minix@hongkong.com>
+-----------------------------------------
+He informed me about a bug which occurred with version 1.06pre0 when files
+less than 7 bytes in size were downloaded using the http protocol.
+
+"Gustavo Noronha Silva (KoV)" <dockov@zaz.com.br>
+-------------------------------------------------
+The prozilla man page was written by him, and he is acting as the debian
+maintainer for prozilla. He also brought to notice an important bug in the
+ftp code.
+
+Calum Selkirk <cselkirk@sophix.uklinux.net>
+-------------------------------------------
+For the modified RPM script.
+
+Seth Cohn <scohn@oregonmed.net>
+-------------------------------
+He brought to my notice the bug that caused the screen corruption and also
+suggested a way to fix it.
+
+Davy Durham <david.durham@wcom.com>
+-----------------------------------
+He did testing, and suggestions.
+
+Uwe Hermann <uh1763@hermann-uwe.de>
+-----------------------------------
+For the patch which corrected my incorrect spelling, and for the ideas
+about correcting the layout of the distribution, and the changes to the
+man page.
+
+Drew <drew@no6.com>
+-------------------
+For the idea to add a progress displayer for the file rebuilding process
+once the download is completed.
+
+Steven Hatfield <ashari@knightswood.net>
+---------------------------------------
+He reported the bug about the ~./netrc file being not handled. 
+
+Guillermo Pereyra Irujo <gpirujo@pop3free.com>
+----------------------------------------------
+For informing that in the curses display the status and received titles
+were reversed.  
+
+Andy Jeffries <andy@scramdisk.eu.org>
+-------------------------------------
+Suggesting that support for bandwith limiting should be implemented.
+
+Michael Duelli <m.duelli@web.de>
+--------------------------------
+Patches correcting sytaxes and simplifying the code in the help and
+license functions, and adding support so prozilla can download multiple
+URL's (not yet added). He also corrected the over scrolling which occured
+in the curses window. The new burst download speed indicator is also
+thanks to him.
+
+Kalum Somaratna <kalum@delrom.ro> 
+---------------------------------
+Hmm..thats me..well what can you say about yourself ;). Well I designed
+Prozilla and coded most of it from scratch, with the kind help and
+contributions from all the people above. I also contributed to unfound
+bugs (hopefully none) lurking out there...
+

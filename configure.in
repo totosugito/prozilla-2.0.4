@@ -1,0 +1,200 @@
+AC_PREREQ(2.50)
+
+dnl AC_INIT(src/main.cpp)
+AC_INIT([proz],[2.0.4],[prozilla@genesys.ro])
+
+AM_INIT_AUTOMAKE
+
+AM_CONFIG_HEADER(config.h)
+AC_CONFIG_SUBDIRS(libprozilla)
+AC_LANG_CPLUSPLUS
+AC_ISC_POSIX     
+
+
+dnl LDLIBS="-lm"
+AC_CANONICAL_HOST
+
+dnl ---------------------------------------------------------------------------
+dnl Checks for programs.
+dnl ---------------------------------------------------------------------------
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_CHECK_PROG(UNAME,uname,uname,:)
+#M_ENABLE_STATIC
+#M_DISABLE_SHARED
+AC_PROG_LIBTOOL  
+dnl -------------
+dnl gettext stuff
+dnl -------------
+ALL_LINGUAS="pt_BR nl ro it fr"
+AM_GNU_GETTEXT
+  
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_HEADER_TIME
+AC_STRUCT_TM
+
+AC_SUBST(CPFLAGS)
+AC_SUBST(CEFLAGS)
+AC_SUBST(LDEFLAGS)
+
+dnl Check for libraries...
+dnl LDFLAGS="${LDFLAGS:=}"
+dnl AC_SUBST(LDFLAGS)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(ncurses.h curses.h string.h sys/time.h sys/types.h unistd.h)
+
+AC_CHECK_LIB(ncurses, initscr, initscr=on, initscr=off)
+  if (test $initscr = on) then
+     CURSLIB="ncurses"
+     LIBS="-l$CURSLIB $LIBS"
+     AC_DEFINE(HAVE_LIBNCURSES,[],[1])
+     AC_DEFINE(HAVE_CURSES,[],[1])
+    else
+     AC_CHECK_LIB(curses, initscr, initscr=on, initscr=off)
+    if (test $initscr = on) then
+       CURSLIB="curses"
+       LIBS="-l$CURSLIB $LIBS"
+       AC_DEFINE(HAVE_LIBCURSES,[],[1])
+       AC_DEFINE(HAVE_CURSES,[],[1])
+     fi
+fi
+
+if (test $initscr = off) then
+AC_MSG_ERROR([**A (n)curses library was not found. The program needs ncurses to run, Ncurses is freely available at : ftp://ftp.gnu.org/pub/gnu **])
+fi
+
+
+dnl Checks for string functions.
+AC_CHECK_FUNCS(strdup)
+AC_CHECK_FUNCS(strcasecmp)
+AC_CHECK_FUNCS(strncasecmp)
+
+dnl ---------------------------------------------------------------------------
+dnl Checks for libraries.
+dnl ---------------------------------------------------------------------------
+
+AC_TYPE_SIZE_T
+TYPE_SOCKLEN_T
+
+CFLAGS="-Wall -O2 -D_REENTRANT"
+
+
+dnl ==============
+dnl CHECK FLTK LIB
+dnl ==============
+dnl AC_CHECK_HEADERS(FL/Fl.H, have_fltk=yes, have_fltk=no)
+
+dnl AC_SUBST(FLTK_LIBS)
+dnl AC_SUBST(FLTK_DIR)
+    
+dnl Check for GUI libraries...
+OLDLIBS="$LIBS"
+
+
+AC_PATH_X
+
+dnl  if test "$x_libraries" = "/usr/lib"; then
+dnl        echo "Ignoring X library directory \"$x_libraries\" requested by configure."
+dnl        x_libraries="NONE"
+dnl    fi
+dnl
+dnl    if test ! "$x_libraries" = "NONE" -a ! "$x_libraries" = ""; then
+dnl        LDFLAGS="$LDFLAGS -L$x_libraries"
+dnl        if test "$uname" = "SunOS"; then
+dnl                LDFLAGS="$LDFLAGS -R$x_libraries"
+dnl        fi
+dnl    fi
+dnl
+dnl
+dnl    if test "$x_includes" = "/usr/include"; then
+dnl        echo "Ignoring X include directory \"$x_includes\" requested by configure."
+dnl        x_includes="NONE"
+dnl    fi
+
+dnl    if test ! "$x_includes" = "NONE" -a ! "$x_includes" = ""; then
+dnl        CFLAGS="$CFLAGS -I$x_includes"
+dnl        CXXFLAGS="$CXXFLAGS -I$x_includes"
+dnl    fi
+
+
+case $host in
+  *-*-freebsd*)
+    THREAD_LIBS="-pthread"
+    ;;
+ *-*-openbsd*)
+    THREAD_LIBS="-pthread"
+    ;;
+  *)
+    AC_CHECK_LIB(pthread, pthread_create,
+             THREAD_LIBS="-lpthread",
+             AC_MSG_ERROR([** The pthread library is not installed.**]))
+    ;;
+esac
+AC_SUBST(THREAD_LIBS)
+
+
+
+AC_CHECK_LIB(m,pow)
+
+dnl AC_CHECK_LIB(X11,XOpenDisplay)
+dnl AC_CHECK_LIB(Xext,XdbeQueryExtension)
+			
+dnl AC_CHECK_LIB(Xpm,XpmCreatePixmapFromData)
+dnl Check FLTK by itself
+dnl AC_CHECK_LIB(fltk,numericsort)
+
+   dnl Check FLTK + OpenGL to see if that works...
+dnl    if test "$ac_cv_lib_fltk_numericsort" = no; then
+dnl        unset ac_cv_lib_fltk_numericsort
+dnl        AC_CHECK_LIB(GL,glEnable)
+dnl        AC_CHECK_LIB(fltk,numericsort)
+dnl    fi
+
+dnl AC_CHECK_LIB(fltk,main)
+
+
+dnl ============================================================ NLS Support ===
+dnl
+dnl AC_CHECK_LIB(intl, gettext,
+dnl                [LIBS="$LIBS -lintl"])
+
+  AC_CHECK_FUNC(bindtextdomain,,
+    [ AC_CHECK_LIB(intl, bindtextdomain,
+        [ LIBS="${LIBS} -lintl"
+	    ],
+	        [ AC_MSG_ERROR([NLS (national language support) has been requested but
+		*** the 'bindtextdomain' function neither has been found in your C runtime library 
+		*** nor in an external library called 'libintl'.
+		***
+		*** Install your vendor's version of libintl or get GNU gettext available
+		*** from ftp://ftp.gnu.org/pub/gnu/gettext/.
+		***])])])
+
+AC_PATH_XTRA
+if test "$X_PRE_LIBS" != ""; then
+        echo "Ignoring libraries \"$X_PRE_LIBS\" requested by configure."
+	fi
+	if test "$X_LIBS" = " -L/usr/lib"; then
+	        echo "Ignoring X library directory \"$X_LIBS\" requested by
+		configure."
+		        X_LIBS=""
+fi
+			
+
+CXXFLAGS="-Wall -ggdb -D_REENTRANT"
+
+dnl AC_caolan_FUNC_WHICH_GETHOSTBYNAME_R
+
+dnl Large File Summit support
+AC_SYS_LARGEFILE
+
+dnl Now we've enabled/disabled LFS, see how big file sizes can be.
+AC_CHECK_SIZEOF([off_t])
+
+AC_OUTPUT(Makefile src/Makefile man/Makefile intl/Makefile po/Makefile.in)

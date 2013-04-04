@@ -1,0 +1,115 @@
+.TH "ProZilla" "1" "Aug 29, 2005" "Ralph Slooten" ""
+.SH "NAME"
+\fBProZilla\fR \- a download accelerator for GNU/Linux
+.SH "SYNTAX"
+\fBproz [OPTIONS] <URL>\fR
+.SH "DESCRIPTION"
+\fBProZilla\fR is a download program that makes multiple connections and downloads a file in multiple parts from different servers simultaneously, thus enhancing the download speed and downloading the file faster than a download with a single connection.
+
+ProZilla  is  able to do ftp searches for other possible sites that contain the same file, ping them for connection speeds and automatically download from the fastest sites.
+
+FTP passwords can be specified with the URL, or can be obtained automatically from  \fB~/.netrc\fR if it exists.
+.SH "Options:"
+.TP 
+\-r, \-\-resume
+Resume an interrupted download
+.TP 
+\-f, \-\-force
+Never prompt the user when overwriting files
+.TP 
+\-1
+Force a single connection only
+.TP 
+\-n, \-\-no\-netrc
+Don't use .netrc, get the user/password from the command line, otherwise use the anonymous login for FTP sessions
+.TP 
+\-\-debug
+Log debugging info to a file (default is debug.log)
+.TP 
+\-v,\-\-verbose
+Increase the amount of information sent to stdout
+.TP 
+\-\-no\-curses
+Don't use the Curses interface, but the traditional plain text interface
+.SH "Directories:"
+.TP 
+\-P, \-\-directory\-prefix=DIR
+save the generated file to DIR/
+.SH "FTP Options:"
+.TP 
+\-\-use\-port
+Force usage of PORT insted of PASV (default) for ftp transactions
+.SH "Download Options:"
+.TP 
+\-s, \-\-ftpsearch
+Do a ftpsearch for faster mirrors
+.TP 
+\-\-no\-search
+Do a direct download (no ftpsearch)
+.TP 
+\-k=n
+Use <n> connections instead of the default(4)
+.TP 
+\-\-timeout=n
+Set the timeout for connections to <n> seconds (default 180)
+.TP 
+\-t, \-\-tries=n
+Set number of attempts to n (default(200), 0=unlimited)
+.TP 
+\-\-retry\-delay=n
+Set the time between retrys to <n> seconds (default 15 seconds)
+.TP 
+\-\-max\-bps=n
+Limit bandwith consumed to <n> bps (0=unlimited)
+.SH "FTP Search Options:"
+.TP 
+\-\-pt=n
+Wait 2*n seconds for a server response (default 2*4)
+.TP 
+\-\-pao=n
+Ping n servers at once(default 5 servers at once)
+.TP 
+\-\-max\-ftps\-servers=n
+Request a max of <n> servers from ftpsearch (default 40)
+.TP 
+\-\-min\-size=n
+If a file is smaller than <n>Kb, don't search, just download it
+.TP 
+\-\-ftpsid=n
+The ftpsearch server to use (0=filesearching.com, 1=ftpsearch.elmundo.es)
+.SH "Information Options:"
+.TP 
+\-L, \-\-license
+Display software license
+.TP 
+\-V, \-\-version
+Display version number
+.SH "EXAMPLES"
+.TP 
+proz <URL>
+ProZilla will connect to that server and download the file using the default settings
+.TP 
+proz \-1 <URL>
+ProZilla will connect and download the file in 1 part only
+.TP 
+proz \-s <URL>
+invokes ftpsearch and will download from the fastest servers
+.TP 
+proz \-s \-k=10 <URL>
+invokes ftpsearch and will download from the fastest servers using 10 connections
+.SH "GENTOO EXAMPLE"
+.TP 
+FETCHCOMMAND='/usr/local/bin/proz \-\-no\-curses \-\-min\-size=500 \-\-no\-getch \-s ${URI} \-P ${DISTDIR}'
+can be placed in /etc/make.conf to use ProZilla to download your system updates. This example will not do FTP searches for files < 500Kb, uses the text interface (handier with portage) and saves the files in your ${DISTDIR} (normally /usr/portage/distfiles)
+.SH "FILES"
+.TP 
+"/etc/prozilla.conf"
+The global config file
+.TP 
+"~/.prozrc"
+The per\-user config file
+.TP 
+"~/.netrc"
+A file which can be used to provide ProZilla with hosts, accounts and passwords
+.SH "BUGS"
+Please report bugs to our mailinglist via the website http://prozilla.genesys.ro/

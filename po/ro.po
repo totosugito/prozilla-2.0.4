@@ -1,0 +1,445 @@
+# Romanian messages for prozgui.
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Flower <flower_os@yahoo.com>, 2001.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-08-19 21:49+0600\n"
+"PO-Revision-Date: 2001-08-21 06:14+0300\n"
+"Last-Translator: Flower <flower_os@yahoo.com>\n"
+"Language-Team: RTFS <rtfs-project@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/we.cxx:49
+msgid "USER@SITE"
+msgstr "USER@SITE"
+
+#: src/we.cxx:50
+msgid "USER@ProxyUser@SITE"
+msgstr "USER@ProxyUser@SITE"
+
+#: src/we.cxx:51
+msgid "USER@SITE_PROXYUSER"
+msgstr "USER@SITE_PROXYUSER"
+
+#: src/we.cxx:52
+msgid "ProxyUser@SITE"
+msgstr "ProxyUser@SITE"
+
+#: src/we.cxx:53
+msgid "LOGIN_then_USER@SITE"
+msgstr "LOGIN_then_USER@SITE"
+
+#: src/we.cxx:54
+msgid "OPENSITE"
+msgstr "OPENSITE"
+
+#: src/we.cxx:55
+msgid "SITESITE"
+msgstr "SITESITE"
+
+#: src/we.cxx:56
+msgid "HTTP"
+msgstr "HTTP"
+
+#: src/we.cxx:74
+msgid "Prozilla Preferences Panel"
+msgstr "Panoul de opþiuni pentru Prozilla"
+
+#: src/we.cxx:79
+msgid "General"
+msgstr "General"
+
+#: src/we.cxx:98
+msgid "Number of Threads:"
+msgstr "Numãrul de fire:"
+
+#: src/we.cxx:107
+msgid "Use PASV for FTP transfers (recommended)"
+msgstr "Foloseºte PASV pentru transferurile FTP (recomandat)"
+
+#: src/we.cxx:111
+msgid ""
+"Ask the HTTP proxies not to cache requests between sessions (default is off)"
+msgstr ""
+"Cere proxy-urilor de HTTP sã nu pãstreze cererile între sesiuni (implicit e inactiv)"
+
+#: src/we.cxx:127
+msgid "Retry Delay (Sec):"
+msgstr "Pauzã între încercãri (sec):"
+
+#: src/we.cxx:131
+msgid "Timeout Period (Sec):"
+msgstr "Timp maxim (sec):"
+
+#: src/we.cxx:135
+msgid "Directory to download the files:"
+msgstr ""
+
+#: src/we.cxx:139
+msgid "Limit bandwith usage PER download to (Kbps) (0 = unlimited):"
+msgstr "Limiteazã lãþimea de bandã PER descãrcare la (Kbps) (0 = nelimitat):"
+
+#: src/we.cxx:147
+msgid "Proxies"
+msgstr "Proxy-uri"
+
+#: src/we.cxx:155 src/we.cxx:180
+msgid "Hostname:"
+msgstr "Hostname:"
+
+#: src/we.cxx:160 src/we.cxx:185
+msgid "Port:"
+msgstr "Port:"
+
+#: src/we.cxx:166
+msgid "HTTP Proxy:"
+msgstr "Proxy HTTP:"
+
+#: src/we.cxx:169 src/we.cxx:191
+msgid "Username:"
+msgstr "Nume de utilizator:"
+
+#: src/we.cxx:174 src/we.cxx:196
+msgid "Password:"
+msgstr "Parola:"
+
+#: src/we.cxx:202
+msgid "FTP Proxy:"
+msgstr "Proxy FTP:"
+
+#: src/we.cxx:205
+msgid "FTP Proxy Type:"
+msgstr "Tipul de proxy FTP:"
+
+#: src/we.cxx:211
+msgid "Use HTTP Proxy"
+msgstr "Foloseºte proxy-ul HTTP"
+
+#: src/we.cxx:215
+msgid "Use FTP Proxy"
+msgstr "Foloseºte proxy-ul FTP"
+
+#: src/we.cxx:222
+msgid "Direct Connection to the Internet"
+msgstr "Conexiune directã la Internet"
+
+#: src/we.cxx:228
+msgid "Use proxies"
+msgstr "Foloseºte proxy-uri"
+
+#: src/we.cxx:242 src/we.cxx:4203 src/we.cxx:4500
+msgid "OK"
+msgstr "OK"
+
+#: src/dl_win.cxx:88 src/we.cxx:246 src/we.cxx:4516
+msgid "Cancel"
+msgstr "Renunþã"
+
+#: src/we.cxx:4151
+msgid "Prozilla Download Accelerator M2"
+msgstr "Prozilla Download Accelerator M2"
+
+#: src/we.cxx:4156
+msgid "GUI Version 2.0.4-beta"
+msgstr "Versiunea GUI 2.0.4-beta"
+
+#: src/we.cxx:4159
+msgid "libprozilla version 1.0.0"
+msgstr "versiunea libprozilla 1.0.0"
+
+#: src/we.cxx:4162
+msgid "Credits"
+msgstr "Mulþumiri"
+
+#: src/we.cxx:4168
+msgid "Kalum Somaratna - Main Programming"
+msgstr "Kalum Somaratna - Programator principal"
+
+#: src/we.cxx:4171
+msgid "Uwe Hermann - Additional Programming"
+msgstr "Uwe Hermann - Programator ajutãtor"
+
+#: src/we.cxx:4174
+msgid ""
+"Gustavo Noronha Silva  (KoV) - libprozilla GNU gettext support, translator, "
+"deb package maintainer"
+msgstr ""
+"Gustavo Noronha Silva  (KoV) - ajutor la GNU gettext pentru libprozilla, traducãtor, "
+"face pachetele deb"
+
+#: src/we.cxx:4179
+msgid "Ralph Slooten - Web Page Maintainer,  RPM packager, testing, translator"
+msgstr "Ralph Slooten - Menþine pagina Web, face pachetele RPM, tester, traducãtor"
+
+#: src/we.cxx:4183
+msgid ""
+"If you have contributed and arent listed, I apologise and  please mail me "
+"<kalum@genesys.ro> and I will correct it"
+msgstr ""
+"Dacã aþi contribuit ºi nu sunteþi afiºat, îmi cer scuze ºi vã rog scrieþi­mi la "
+"<kalum@genesys.ro> ºi­mi voi corecta scãparea"
+
+#: src/we.cxx:4188
+msgid ""
+"Silviu Marin-Caea - (Our sysadmin) Donation of valuable bandwith and system "
+"resources at genesys.ro, testing"
+msgstr ""
+"Silviu Marin-Caea - (sysadmin-ul nostru) Doneazã lãþime de bandã ºi resurse "
+"sistem la genesys.ro, tester"
+
+#: src/we.cxx:4193
+msgid "Pablo Iranzo Gómez - testing"
+msgstr "Pablo Iranzo Gómez - tester"
+
+#: src/we.cxx:4197
+msgid "Krogg - The cool Prozilla logo"
+msgstr "Krogg - Meseriaºul logo pentru Prozilla"
+
+#: src/we.cxx:4498
+msgid "Please enter the  URL"
+msgstr "Introduceþi URL-ul"
+
+#: src/we.cxx:4509
+msgid "Enter URL (CTRL+V to paste from clipboard)"
+msgstr "Introduceþi URL-ul (CTRL+V pentru lipire din clipboard)"
+
+#: src/dl_win.cxx:14
+msgid "Abort, Resume Later"
+msgstr "Abandon, continuãm mai târziu"
+
+#: src/dl_win.cxx:19
+msgid "Abort, No  Resume Later"
+msgstr "Abandon, nu mai continuãm"
+
+#: src/dl_win.cxx:25
+msgid "URL:"
+msgstr "URL:"
+
+#: src/dl_win.cxx:63
+msgid "Estimated Time Left"
+msgstr "Timp rãmas estimat"
+
+#: src/dl_win.cxx:84
+msgid "Creating file.............."
+msgstr "Creez fiºierul.............."
+
+#: src/dl_win.cxx:123 src/dl_win.cxx:156 src/dl_win.cxx:194
+msgid "Attention!"
+msgstr "Atenþie!"
+
+#: src/dl_win.cxx:127
+msgid "Ok"
+msgstr "Ok"
+
+#: src/dl_win.cxx:160 src/dl_win.cxx:198
+msgid "Yes"
+msgstr "Da"
+
+#: src/dl_win.cxx:164 src/dl_win.cxx:202
+msgid "No"
+msgstr "Nu"
+
+#: src/download_win.cpp:42
+msgid "Are you Sure You want to quit?"
+msgstr "Sunteþi sigur cã doriþi sã ieºiþi?"
+
+#: src/download_win.cpp:172
+msgid "I am unable to delete the target file!"
+msgstr "Nu pot ºterge fiºierul destinaþie!"
+
+#: src/download_win.cpp:205
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections"
+msgstr ""
+"A apãrut o eroare la procesarea fiºierului de log! Presupun numãrul implicit "
+"de conexiuni"
+
+#: src/download_win.cpp:214
+msgid ""
+"The previous download used a different number of connections than the "
+"default! so I will use the previous number of threads"
+msgstr ""
+"Descãrcarea precedentã a folosit alt numãr de conexiuni decât cel implicit! "
+"Vom folosi deci numãrul vechi de conexiuni."
+
+#: src/download_win.cpp:234
+msgid ""
+"A error occured while processing the logfile! Assuming default number of "
+"connections to delete"
+msgstr ""
+"A apãrut o eroare la procesarea fiºierului de log! Presupun numãrul implicit "
+"de conexiuni pentru ºtergere"
+
+#: src/download_win.cpp:257
+#, c-format
+msgid "The target file %s exists, would you like to overwrite it?"
+msgstr "Fiºierul destinaþie %s existã, doriþi sã­l suprascriem?"
+
+#: src/download_win.cpp:285
+#, c-format
+msgid ""
+"Previous download of %s exists, would you like to resume it or overwrite it?"
+msgstr ""
+"O descãrcare anterioarã a lui %s existã, doriþi sã­l continuãm sau sã­l suprascriem?"
+
+#: src/download_win.cpp:289
+msgid "Resume"
+msgstr "Continuare"
+
+#: src/download_win.cpp:290
+msgid "Overwrite"
+msgstr "Suprascriere"
+
+#: src/download_win.cpp:327
+msgid "RESUME supported"
+msgstr "CONTINUARE posibilã"
+
+#: src/download_win.cpp:335
+msgid "RESUME NOT supported"
+msgstr "CONTINUARE imposibilã"
+
+#: src/download_win.cpp:379
+msgid "waiting for thread to end"
+msgstr "aºtept firul sã se termine"
+
+#: src/download_win.cpp:381
+msgid "Thread ended"
+msgstr "Fir terminat"
+
+#: src/download_win.cpp:389
+msgid "Got info succesfully"
+msgstr "Informaþii primite"
+
+#: src/download_win.cpp:392
+#, c-format
+msgid "File Size = %ld Kb"
+msgstr "Mãrimea fiºierului = %ld Kb"
+
+#: src/download_win.cpp:396
+msgid "File Size is UNKOWN"
+msgstr "Mãrimea fiºierului este necunoscutã"
+
+#: src/download_win.cpp:405
+#, c-format
+msgid "The URL %s doesnt exist!"
+msgstr "URL-ul %s nu existã!"
+
+#: src/download_win.cpp:451
+#, c-format
+msgid "Total Bytes received %ld Kb"
+msgstr "Am primit %ld Kb"
+
+#: src/download_win.cpp:456
+#, c-format
+msgid "Average Speed = %.3f Kb/sec"
+msgstr "Viteza medie = %.3f Kb/sec"
+
+#: src/download_win.cpp:465
+#, c-format
+msgid "%d Seconds"
+msgstr "%d secunde"
+
+#: src/download_win.cpp:467
+#, c-format
+msgid "%d Minutes %d Seconds"
+msgstr "%d minute ºi %d secunde"
+
+#: src/download_win.cpp:470
+#, c-format
+msgid "%d Hours %d minutes"
+msgstr "%d ore ºi %d minute"
+
+#.  Wait till all are completed
+#: src/download_win.cpp:492
+msgid "Waiting till all threads terminate"
+msgstr "Aºtept sã se terminte toate firele"
+
+#: src/download_win.cpp:497
+msgid "Got DL succesfully, now building file"
+msgstr "Descãrcare terminatã, construiesc fiºierul"
+
+#: src/download_win.cpp:503
+#, c-format
+msgid "Building file %s ....."
+msgstr "Construiesc fiºierul %s ....."
+
+#: src/download_win.cpp:527
+msgid ""
+"Error the server/proxy lied about resuming so I have to restart this from "
+"the begiining!"
+msgstr ""
+"Eroare serverul/proxy-ul a minþit referitor la continuare deci trebuie sã "
+"reiau de la început!"
+
+#: src/download_win.cpp:547
+#, c-format
+msgid ""
+"One connection of the download %s encountered a unrecoverable local error, "
+"usually lack of free space, or a write to bad medium, or a problem with "
+"permissions,so pelase fix this and retry"
+msgstr ""
+"Una dintre conexiunile descãrcãrii %s a întâmpinat o eroare localã nereparabilã, "
+"de obicei cauzatã de lipsa de spaþiu, scrierea pe suport defectuos sau o problemã "
+"cu permisiunile, deci reparaþi eroarea ºi reîncercaþi"
+
+#: src/download_win.cpp:596 src/download_win.cpp:621
+msgid "Close"
+msgstr "Închide"
+
+#: src/download_win.cpp:689
+msgid "Creating the thread that gets info about file.."
+msgstr "Creez firul care ia informaþii despre fiºier."
+
+#: src/main.cpp:222 src/main.cpp:335
+#, c-format
+msgid "%s does not seem to be a valid URL"
+msgstr "%s nu pare sã fie un URL valid"
+
+#: src/main.cpp:275
+msgid "Error: Invalid  option\n"
+msgstr "Eroare: optiune invalidã\n"
+
+#: src/main.cpp:280
+msgid "Prozilla - Download Accelerator"
+msgstr "Prozilla - Download Accelerator"
+
+#: src/main.cpp:303
+msgid "&File"
+msgstr "&Fiºier"
+
+#: src/main.cpp:304
+msgid "&New URL"
+msgstr "URL &nou"
+
+#: src/main.cpp:305
+msgid "&Preferences"
+msgstr "&Preferinþe"
+
+#: src/main.cpp:306
+msgid "&About"
+msgstr "&Despre"
+
+#: src/main.cpp:307
+msgid "&Quit"
+msgstr "&Ieºire"
+
+#: src/options.cpp:119
+#, c-format
+msgid "%s does not seem to be a valid directory"
+msgstr "%s nu pare sã fie un director valid"
+
+#: src/options.cpp:142
+#, c-format
+msgid "%s does not seem to be a valid HTTP proxy value"
+msgstr "%s nu pare sã fie o valoare validã pentru proxy HTTP"
+
+#: src/options.cpp:170
+#, c-format
+msgid "%s does not seem to be a valid FTP proxy value"
+msgstr "%s nu pare sã fie o valoare validã pentru proxy FTP"

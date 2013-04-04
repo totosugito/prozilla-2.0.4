@@ -1,0 +1,771 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-08-15 04:19+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/connection.c:157 src/connection.c:247
+#, c-format
+msgid "Unable to open file %s: %s!"
+msgstr "Onmogelijk bestand te openen %s: %s!"
+
+#: src/connection.c:179 src/connection.c:294
+msgid "write failed"
+msgstr "schrijven mislukt"
+
+#: src/connection.c:182 src/connection.c:297
+#, c-format
+msgid "Unable to write to file %s: %s!"
+msgstr "Onmogelijk om te schrijven naar bestand %s: %s!"
+
+#: src/connection.c:205 src/connection.c:278
+msgid "connection timed out"
+msgstr "verbindingstijd verlopen"
+
+#: src/connection.c:216 src/connection.c:317
+#, c-format
+msgid "download for this connection completed%s : %ld received"
+msgstr "download voor deze verbinding voltooid%s: %ld ontvangen"
+
+#: src/connection.c:269
+msgid "Server Closed Connection Prematurely!"
+msgstr "Server sloot verbinding van tevoren!"
+
+#: src/connection.c:375
+#, c-format
+msgid "orig start pos= %d\n"
+msgstr "originele start pos= %d\n"
+
+#: src/connection.c:406
+msgid "Idle"
+msgstr "Ongebruikt"
+
+#: src/connection.c:409
+msgid "Connecting"
+msgstr "Verbinding"
+
+#: src/connection.c:412
+msgid "Logging in"
+msgstr "Bezig met aanmelden"
+
+#: src/connection.c:415
+msgid "Downloading"
+msgstr "Aan het downloaden"
+
+#: src/connection.c:418
+msgid "Completed"
+msgstr "Voltooid"
+
+#: src/connection.c:421
+msgid "Login Denied"
+msgstr "Aanmelding geweigerd"
+
+#: src/connection.c:424
+msgid "Connect Refused"
+msgstr "Verbinding geweigerd"
+
+#: src/connection.c:427
+msgid "Remote Fatal"
+msgstr "Fatale fout andere zijde"
+
+#: src/connection.c:430
+msgid "Local Fatal"
+msgstr "Locale fatale fout"
+
+#: src/connection.c:433
+msgid "Timed Out"
+msgstr "Tijd verlopen"
+
+#: src/connection.c:435
+msgid "Max attempts reached"
+msgstr "Max pogingen bereikt"
+
+#: src/connection.c:438
+msgid "Unkown Status!"
+msgstr "Onbekende status!"
+
+#: src/connection.c:520 src/misc.c:469
+msgid "Error: unsupported protocol"
+msgstr "Fout: niet ondersteund protocol"
+
+#: src/connection.c:542
+#, c-format
+msgid "The server returned location is wrong: %s!"
+msgstr "De server meld dat de lokatie verkeerd is: %s!"
+
+#: src/connection.c:549
+#, c-format
+msgid "Redirected to => %s"
+msgstr ""
+
+#: src/debug.c:60 src/download.c:633 src/download.c:1021
+#, c-format
+msgid "unable to delete the file %s. Reason-: %s"
+msgstr "Unmogelijk bestand te wissen %s. Reden-: %s"
+
+#: src/download.c:171
+#, c-format
+msgid "Error while processing prior download of connection number %d"
+msgstr "Fout bij het verwerken voorafgaande download van connectie nummer %d"
+
+#: src/download.c:200
+msgid "Warning! Unable to create logfile!"
+msgstr "Waarschuwing! Onmogelijk om logfile te maken!"
+
+#: src/download.c:225 src/download.c:236 src/download.c:338 src/download.c:377
+#: src/download.c:396 src/download.c:418 src/download.c:457 src/download.c:476
+msgid "Error: Not enough system resources"
+msgstr "Fout: Niet genoeg systeem bronnen"
+
+#: src/download.c:240
+msgid "Error: Unsupported Protocol was specified"
+msgstr "Fout: Niet ondersteund protocol is ingesteld"
+
+#: src/download.c:244
+msgid "All threads created"
+msgstr "Alle draden gecreerd"
+
+#: src/download.c:318
+#, c-format
+msgid "Connection %d, had a local fatal error: %s .Aborting download. "
+msgstr "Connectie %d, heeft een locale fatale fout: %s . Download gestopt. "
+
+#: src/download.c:334
+msgid "All logins rejected!.Retrying connection"
+msgstr "Alle aanmeldingen verworpen!. Bezig opnieuw verbinding te maken"
+
+#: src/download.c:373 src/download.c:392 src/download.c:453 src/download.c:472
+msgid "Relaunching download"
+msgstr "Download herstarten"
+
+#: src/download.c:414
+msgid "All connections attempts have been  rejected!.Retrying connection"
+msgstr "Alle verbindingen zijn verworpen!. Bezig opnieuw verbinding te maken"
+
+#: src/download.c:695
+#, c-format
+msgid "Unable to allocate %d bytes to recreate files"
+msgstr "Onmogelijk om %d bytes te lokaliseren om bestanden te creëren"
+
+#: src/download.c:713
+#, c-format
+msgid "Error: unable to open the file %s for writing-: %s\n"
+msgstr "Fout: onmogelijk om bestand %s te openen om te schrijven-: %s\n"
+
+#: src/download.c:732
+#, c-format
+msgid "Error: Unable to open the file %s for reading-: %s\n"
+msgstr "Fout: onmogelijk om bestand %s te openen om te lezen-: %s\n"
+
+#: src/download.c:770
+#, c-format
+msgid "Unable to delete the file %s before exiting. Reason-: %s"
+msgstr "Onmogelijk om bestand %s te wissen voor het sluiten. Reden-: %s"
+
+#: src/download.c:777
+#, c-format
+msgid "Error:A write error occured while writing to  %s -: %s\n"
+msgstr "Foute: Een schrijffout is ontstaan bij het schrijven naar %s -: %s\n"
+
+#: src/download.c:792
+#, c-format
+msgid "Successfully Wrote  %s \n"
+msgstr "Successvol geschreven %s \n"
+
+#: src/ftp.c:106
+#, c-format
+msgid "Message = %s"
+msgstr "Bericht = %s"
+
+#: src/ftp.c:126
+#, c-format
+msgid "Error checking for FTP data: %s"
+msgstr "Fout bij het controleren van FTP data: %s"
+
+#: src/ftp.c:143
+#, c-format
+msgid "Error receiving FTP data: %s"
+msgstr "Foute bij het onvangen van FTP data: %s"
+
+#: src/ftp.c:167
+#, c-format
+msgid "Sending:  %s"
+msgstr "Verzenden:  %s"
+
+#: src/ftp.c:172
+#, c-format
+msgid "Error sending FTP data: %s"
+msgstr "Foute bij het zenden van FTP data: %s"
+
+#: src/ftp.c:213
+#, c-format
+msgid "Received: %s"
+msgstr "Ontvangen: %s"
+
+#: src/ftp.c:344
+#, c-format
+msgid "FTP PASV Header = %s"
+msgstr "FTP PASV Beginkop= %s"
+
+#. Unknown error code.
+#: src/ftp.c:759
+#, c-format
+msgid "Unknown code %d retuned during FTP login"
+msgstr "Onbekende code %d ontstaan bij het FTP aanmelden"
+
+#: src/ftp.c:811 src/ftp.c:831 src/http-retr.c:69 src/http-retr.c:84
+#: src/http.c:562 src/http.c:577
+#, c-format
+msgid "Connecting to %s"
+msgstr "Verbinden met $s"
+
+#: src/ftp.c:822 src/ftp.c:840
+#, c-format
+msgid "Error while connecting to %s"
+msgstr "Fout bij het verbinden met %s"
+
+#: src/ftp.c:827 src/ftp.c:844
+#, c-format
+msgid "Connected to %s"
+msgstr "Verbonden met %s"
+
+#: src/ftp.c:870
+#, c-format
+msgid "Logging in as user %s with password %s"
+msgstr "Aanmelden als gebruiker %s met wachtwoord %s"
+
+#: src/ftp.c:882
+msgid "Logged in successfully"
+msgstr "Aanmelden succesvol"
+
+#: src/ftp.c:902
+#, c-format
+msgid "CWD failed to change to directory '%s'"
+msgstr "CWD directory veranderen mislukt '%s'"
+
+#: src/ftp.c:911
+msgid "CWD not needed"
+msgstr "CWD niet nodig"
+
+#: src/ftp.c:918
+msgid "REST failed"
+msgstr "REST mislukt"
+
+#: src/ftp.c:923
+msgid "REST ok"
+msgstr "REST ok"
+
+#: src/ftp.c:1003
+#, c-format
+msgid "Error receiving FTP transfer data: %s"
+msgstr "Fout bij het ontvangen van FTP overdracht data: %s"
+
+#: src/ftp.c:1008
+#, c-format
+msgid "String received after the LIST command = %s"
+msgstr "Lijn ontvangen na het LIST commando = %s"
+
+#: src/ftp.c:1026
+msgid ""
+"Unable to parse the line the FTP server returned:please report URL to "
+"kalum@delrom.ro "
+msgstr ""
+"Onmogelijk om de inkomende lijn van de FTP server te vertalen: rapporteer URL naar "
+"kalum@delrom.ro "
+
+#: src/ftp.c:1053
+msgid "Server doesn't seem to support PASV"
+msgstr "De server ondersteund geen PASV"
+
+#: src/ftp.c:1129
+#, c-format
+msgid "Retrying attempt %d in %d seconds"
+msgstr "Nogmaals een poging %d in %d seconden"
+
+#: src/ftp.c:1148 src/http.c:734
+msgid "Seccessfully got info"
+msgstr "Successvol info verkregen"
+
+#: src/ftp.c:1156 src/http.c:746
+msgid "File not found!"
+msgstr "Bestand niet gevonden!"
+
+#: src/ftp-retr.c:321 src/ftp.c:1175 src/http-retr.c:333 src/http.c:765
+#, c-format
+msgid "I have tried %d attempt(s) and have failed, aborting"
+msgstr "Ik heb %d poging(en) geprobeerd en deze zijn mislukt, gestopt"
+
+#: src/ftpparse.c:194
+#, c-format
+msgid "MULTINET Size: %d\n"
+msgstr "MULTINET grootte: %d\n"
+
+#: src/ftpparse.c:235
+#, c-format
+msgid "BINLS size: %d\n"
+msgstr "BINLS grootte: %d\n"
+
+#: src/ftp-retr.c:125
+#, c-format
+msgid "Logging in as user %s with password %s."
+msgstr "Bezig in te loggen als gebruiker %s met wachtwoord %s"
+
+#: src/ftp-retr.c:165
+#, c-format
+msgid "CWD failed to change to directory '%s'."
+msgstr "CWD directory veranderen mislukt '%s'"
+
+#: src/ftp-retr.c:171
+msgid "CWD ok."
+msgstr "CWD ok"
+
+#: src/ftp-retr.c:175
+msgid "CWD not needed."
+msgstr "CWD niet nodig."
+
+#: src/ftp-retr.c:196
+msgid ""
+"I have a bug in my  code!!, check remote_starpos and resume_support values"
+msgstr "Ik heb een fout in mijn code!!, controleer remote_starpos en resume_support's waarden"
+
+#: src/ftp-retr.c:206
+msgid "RETR failed"
+msgstr "RETR mislukt"
+
+#: src/ftp-retr.c:261
+#, c-format
+msgid "Retrying..Attempt %d in %d seconds"
+msgstr "Opnieuw proberen... poging %d in %d seconden"
+
+#: src/ftp-retr.c:273 src/http-retr.c:286
+msgid "Error while attemting to process download file "
+msgstr "Fout bij het verwerken van het download bestand"
+
+#: src/ftp-retr.c:304 src/http-retr.c:313
+msgid "Seccessfully got download"
+msgstr "Succesvol gedownload"
+
+#: src/ftp-retr.c:310
+msgid "Error occured in connection..."
+msgstr "Fout opgetreden in verbinding..."
+
+#: src/getopt.c:741
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: optie '%s' is dubbelzinnig\n"
+
+#: src/getopt.c:769
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: optie '--%s' staat dit argument niet toe\n"
+
+#: src/getopt.c:776
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: optie '%c%s' staat dit argument niet toe\n"
+
+#: src/getopt.c:792 src/getopt.c:995
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: optie '%s' is een argument benodigd\n"
+
+#.
+#. * --option
+#.
+#: src/getopt.c:825
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: onbekende optie '--%s'\n"
+
+#.
+#. * +option or -option
+#.
+#: src/getopt.c:831
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: onbekende optie '%c%s'\n"
+
+#.
+#. * 1003.2 specifies the format of this message.
+#.
+#: src/getopt.c:863
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: foutieve optie -- %c\n"
+
+#: src/getopt.c:865
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: foutieve optie -- %c\n"
+
+#: src/getopt.c:902 src/getopt.c:1051
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: optie is een argument nodig -- %c\n"
+
+#: src/getopt.c:961
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: optie '-W %s' is tegenstrijdig\n"
+
+#: src/getopt.c:981
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: optie '-W %s' staat geen argument toe\n"
+
+#: src/getopt.c:1118
+msgid "digits occur in two different argv-elements.\n"
+msgstr "cijfers ontstaan in twee verschillende ergv-elementen.\n"
+
+#: src/getopt.c:1124
+msgid "option a\n"
+msgstr "optie a\n"
+
+#: src/getopt.c:1128
+msgid "option b\n"
+msgstr "optie b\n"
+
+#: src/getopt.c:1132
+#, c-format
+msgid "option c with value `%s'\n"
+msgstr "optie c met waarde '%s'\n"
+
+#: src/getopt.c:1139
+#, c-format
+msgid "?? getopt returned character code 0%o ??\n"
+msgstr "?? getopt terugkerende karakter code )%o ??\n"
+
+#: src/getopt.c:1145
+msgid "non-option ARGV-elements: "
+msgstr "geen-optie ARGV-elementen: "
+
+#: src/http.c:376
+msgid "Failed writing HTTP request"
+msgstr "HTTP aanvraag mislukt"
+
+#: src/http.c:397
+#, c-format
+msgid "Header = %s"
+msgstr "Begin = %s"
+
+#: src/http.c:401
+msgid "End of file while parsing headers"
+msgstr "Einde van bestand tijdens het verwerken van het begin"
+
+#: src/http.c:412
+msgid "Read error in headers"
+msgstr "Lees fout in het begin"
+
+#. Store the descriptive response.
+#. Malformed request.
+#: src/http.c:438
+msgid "UNKNOWN"
+msgstr "ONBEKEND"
+
+#: src/http.c:440
+msgid "(no description)"
+msgstr "(geen omschrijving)"
+
+#: src/http-retr.c:77 src/http-retr.c:91 src/http-retr.c:395 src/http.c:571
+#: src/http.c:583 src/http.c:801
+#, c-format
+msgid "Error connecting to %s"
+msgstr "Fout bij het verbinden met %s"
+
+#: src/http-retr.c:119 src/http-retr.c:422 src/http.c:611 src/http.c:828
+#, c-format
+msgid "Authenticating as user %s password %s"
+msgstr "Authenticatie als gebruiker %s wachtwoord %s"
+
+#: src/http-retr.c:120 src/http-retr.c:423 src/http.c:612 src/http.c:829
+#, c-format
+msgid "Authentification string=%s"
+msgstr "Authenticatie tekenreeks=%s"
+
+#: src/http-retr.c:198 src/http-retr.c:478 src/http.c:682
+msgid "Sending HTTP request"
+msgstr "Verzenden van HTTP aanvraag"
+
+#: src/http-retr.c:274 src/http.c:717
+#, c-format
+msgid "Retrying...Attempt %d in %d seconds"
+msgstr "Opnieuw proberen... poging %d in %d seconden"
+
+#: src/http-retr.c:306
+msgid "Will be hanled in main "
+msgstr "Zal in het hoofddeel worden afgehandeld"
+
+#: src/logfile.c:49
+#, c-format
+msgid "Error opening file %s for writing: %s"
+msgstr "Fout bij openen van bestand %s om te schrijven: %s"
+
+#: src/logfile.c:65 src/logfile.c:75 src/logfile.c:93 src/logfile.c:104
+#: src/logfile.c:115
+#, c-format
+msgid "Error writing to file %s: %s"
+msgstr "Fout bij het schrijven naar %s: %s"
+
+#: src/logfile.c:168
+msgid "logfile doesn't exist"
+msgstr "logbestand bestaat niet"
+
+#: src/logfile.c:198
+#, c-format
+msgid "Error opening file %s for reading: %s"
+msgstr "Fout bij het openen van bestand %s om te lezen: %s"
+
+#: src/logfile.c:232 src/logfile.c:244 src/logfile.c:256
+#, c-format
+msgid "Error reading from file %s: %s"
+msgstr "Fout bij het lezen van bestand %s: %s"
+
+#: src/misc.c:48
+#, c-format
+msgid "Failed to malloc() %lu bytes."
+msgstr "Fout bij malloc() %lu bytes."
+
+#: src/misc.c:63
+#, c-format
+msgid "Failed to realloc() %lu bytes."
+msgstr "Fout bij realloc() %lu bytes."
+
+#: src/misc.c:85
+msgid "Not enough memory to continue: strdup() failed."
+msgstr "Niet genoeg geheugen om verder te gaan: strdup() mislukt."
+
+#: src/misc.c:304
+msgid "Warning: Unable to delay"
+msgstr "Waarschuwing: ommogelijk om te vertragen"
+
+#: src/misc.c:326
+msgid "Unable to lookup hostname"
+msgstr "Onmogelijk hostnaam te vinden"
+
+#: src/misc.c:328
+msgid "Unable to create socket"
+msgstr "Onmogelijk socket te creëren"
+
+#: src/misc.c:330
+msgid "Error occured while connecting"
+msgstr "Fout bij het verbinden"
+
+#: src/misc.c:332
+msgid "The cconnection attempt was refused"
+msgstr "De verbindingspoging is geweigerd"
+
+#: src/misc.c:334
+msgid "Error while accepting the connection"
+msgstr "Fout bij het accepteren van de verbinding"
+
+#: src/misc.c:336
+msgid "Error while Binding socket"
+msgstr "Fout bij het verbinden met de socket"
+
+#: src/misc.c:338
+msgid "Error while listening"
+msgstr "Fout bij het luisteren"
+
+#: src/misc.c:340
+msgid "The connection was reset/closed by the peer"
+msgstr "De verbinding was teruggezet/verbroken door andere zijde"
+
+#: src/misc.c:342
+msgid "The URL Protocol was unknown"
+msgstr "Het URL protocol is niet bekend"
+
+#: src/misc.c:344
+msgid "The port specified in the URL is not valid!"
+msgstr "De poort opgegeven in de URL is niet geldig!"
+
+#: src/misc.c:346
+msgid "The Hostname specified in the URL is not valid!"
+msgstr "De hostnaam opgegeven in de URL is niet geldig!"
+
+#: src/misc.c:348
+msgid "The Pattern specified in the URL does not look valid!"
+msgstr "Het patroon opgegeven in de URL ziet er niet geldig uit!"
+
+#: src/misc.c:350
+msgid "End of file reached in HTTP connection"
+msgstr "Einde van bestand bereikt in HTTP verbinding"
+
+#: src/misc.c:352
+msgid "Error occured in HTTP data transfer"
+msgstr "Fout in HTTP data verkeer"
+
+#: src/misc.c:354
+msgid "Authentification is required to access this resource"
+msgstr "Authenticatie is vereist om toegang te krijgen tot deze bron"
+
+#: src/misc.c:356
+msgid "Failed to Authenticate with host!"
+msgstr "Fout bij authenticatie met host!"
+
+#: src/misc.c:358
+msgid "The URL was not found on the host!"
+msgstr "De URL is niet gevonden op de host!"
+
+#: src/misc.c:360
+msgid "The host disallowed the login attempt"
+msgstr "De host heeft de aanmeldpoging niet toegestaan"
+
+#: src/misc.c:362
+msgid "The PORT request was rejected by the server"
+msgstr "De poort die werdt gevraagd is afgewezen door de server"
+
+#: src/misc.c:364
+msgid "The object file/dir was not found on the host!"
+msgstr "Het object bestand/map is niet gevonden op de host!"
+
+#: src/misc.c:366
+msgid "The TYPE specified in not known by the FTP server!"
+msgstr "Het TYPE is niet bekend bij de FTP server!"
+
+#: src/misc.c:368
+msgid "The command is not known by the FTP server!"
+msgstr "Het commando is niet bekend bij de FTP server!"
+
+#: src/misc.c:370
+msgid "The SIZE command failed"
+msgstr "Het SIZE commando mislukte"
+
+#: src/misc.c:372
+msgid "Error occured in FTP data transfer"
+msgstr "Fout opgetreden in FTP data verkeer"
+
+#: src/misc.c:374
+msgid "The REST command failed"
+msgstr "Het REST commando mislukte"
+
+#: src/misc.c:376
+msgid "The peer did not allow access"
+msgstr "De andere zijde stond geen toegang toe"
+
+#: src/misc.c:378 src/misc.c:380
+msgid "The host rejected the password"
+msgstr "De host wees het wachtwoord af"
+
+#: src/misc.c:382
+msgid "The PASV (passive mode) was not supported the host"
+msgstr "De PASV (passieve modus) is niet ondersteund door de host"
+
+#: src/misc.c:384
+msgid "The host does not support PASV (passive mode) transfers"
+msgstr "Deze host onderteund geen PASV (passieve modus) overdracht"
+
+#: src/misc.c:386
+msgid "The connection attempt was refused"
+msgstr "De verbindingspoging is geweigerd"
+
+#: src/misc.c:388
+msgid "Failed to (CWD)change to the directory"
+msgstr "Mislukt om (CWD) directory te veranderen"
+
+#: src/misc.c:392
+msgid ""
+"The host said the requested service was unavailable and closed the control "
+"connection"
+msgstr ""
+"De host zei dat de gevraagde service niet aanwezig was en verbrook de controle "
+"verbinding"
+
+#: src/misc.c:394
+msgid "getsockname failed!"
+msgstr "getsockname mislukt!"
+
+#: src/misc.c:399
+msgid ""
+"The server, while acting as a gateway or proxy, received an invalid response "
+"from the upstream server it accessed in attempting to fulfill the request"
+msgstr ""
+"De server, die zich voordeed als gateway of proxy, ontving een foute reactie"
+"van de upstream server bij de toegang om aan de aanvraag te voldoen."
+
+#: src/misc.c:404
+msgid ""
+"The server is currently unable to handle the request due to a temporary "
+"overloading or maintenance of the server."
+msgstr ""
+"De server is tijdelijk niet in staat de aanvraag te verwerken doordat hij "
+"overbelast is of in onderhoud is."
+
+#: src/misc.c:409
+msgid ""
+"The server, while acting as a gateway or proxy, received an invalid response "
+"from the upstream server it accessed in attempting to fulfill the request."
+msgstr ""
+"De server, die zich voordeed als gateway of proxy, ontving een foute reactie"
+"van de upstream server bij de toegang om aan de aanvraag te voldoen."
+
+#: src/misc.c:414
+msgid ""
+"The server encountered an unexpected condition which prevented it from "
+"fulfilling the request."
+msgstr ""
+"De server onderging een onverwachte conditie waardoor hij "
+"aan de aanvraag niet kan voldoen."
+
+#: src/misc.c:419
+msgid ""
+"The server does not support the functionality required to fulfill the "
+"request."
+msgstr ""
+"De server heeft geen functionaliteit om de aanvraag te"
+"voltooien."
+
+#: src/misc.c:422
+msgid "Error while opening file"
+msgstr "Fout bij openen van het bestand"
+
+#: src/misc.c:424
+msgid "Error while writing to file"
+msgstr "Fout bij het schrijven naar het bestand"
+
+#: src/misc.c:427
+msgid "The Download was aborted"
+msgstr "De download is afgebroken"
+
+#: src/misc.c:429
+msgid "Error: Resuming this connection is not possible"
+msgstr "Fout: Hervatten van deze verbinding is niet mogelijk"
+
+#: src/misc.c:431
+msgid "Error while reading data from socket"
+msgstr "Fout: bij het lezen van data van de socket"
+
+#: src/misc.c:433
+msgid "Error while writing data to socket"
+msgstr "Fout: bij het schrijven van data naar de socket"
+
+#: src/misc.c:435
+msgid "Error while Proxying"
+msgstr "Fout bij het proxy-en"
+
+#: src/misc.c:437
+msgid "The location is a directory"
+msgstr "De lokatie en map"
+
+#: src/misc.c:440
+msgid "Unknown/Unsupported error code"
+msgstr "Onbekende/Niet ondersteunde fout code"
+
+#: src/netrc.c:215
+#, c-format
+msgid "%s:%d: warning: found \"%s\" before any host names\n"
+msgstr "%s:%d: waarschuwing: gevonden \"%s\" voor alle hostnamen\n"
+
+#: src/netrc.c:243
+#, c-format
+msgid "%s:%d: warning: unknown token \"%s\"\n"
+msgstr "%s:%d: waarschuwing: token onbekend \"%s\"\n"
